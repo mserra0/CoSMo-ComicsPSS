@@ -15,6 +15,8 @@ class PSSDataset(Dataset):
         root_dir,
         model_id,
         backbone,
+        backbone_name,
+        feature_dim,
         processor,
         annotations_path,  
         max_seq_length=512,
@@ -59,16 +61,10 @@ class PSSDataset(Dataset):
         self.filter_unknown = filter_unknown
         
         self.backbone = backbone
-        self.backbone_name = model_id.split('/')[1].split('-')[0]
+        self.backbone_name = backbone_name
         self.processor = processor
-    
-        if self.backbone_name == 'dinov2':
-            self.feature_dim = backbone.config.hidden_size
-        elif self.backbone_name == 'clip' or self.backbone_name == 'siglip':
-            self.feature_dim = backbone.config.vision_config.hidden_size
-        else:
-            print(f"Warning: Unknown backbone '{self.backbone_name}'")
-        
+        self.feature_dim = feature_dim
+       
         self.book_dirs = [d for d in os.listdir(root_dir) if os.path.isdir(os.path.join(root_dir, d))]
         self.book_dirs.sort()  
         
@@ -282,27 +278,34 @@ class PSSDataset(Dataset):
     def _extract_features(self, image_path):
         try:
             image = Image.open(image_path).convert('RGB')
+            
             if self.transform:
                 image = self.transform(image)
             
-            processed = self.processor(images=image, return_tensors="pt")
-            pixel_values = processed['pixel_values'].to(self.device)
+            inputs = {}
+            pixel_values = {}
+                
+            if 'siglip2' in self.backbone_name:
+                inputs = self.processor(images=[image], return_tensors="pt").to(self.device)
+            else:
+                processed = self.processor(images=image, return_tensors="pt")
+                pixel_values = processed['pixel_values'].to(self.device)
+                
             image_features = torch.zeros(self.feature_dim)
             
             with torch.no_grad():
-                if self.backbone_name == 'clip':
+                if 'clip' in self.backbone_name:
                     image_features = self.backbone.get_image_features(pixel_values=pixel_values)
                     
-                elif self.backbone_name == 'siglip':
+                elif 'siglip2' in self.backbone_name:
+                    image_features = self.backbone.get_image_features(**inputs)
                     
+                elif 'siglip' in self.backbone_name:
                     image_features = self.backbone.vision_model(pixel_values=pixel_values).pooler_output
 
-                elif self.backbone_name == 'dinov2':
+                elif 'dinov2' in self.backbone_name:
                     outputs = self.backbone(pixel_values)
                     image_features = outputs.last_hidden_state[:, 0]
-                
-                elif self.backbone_name == 'siglip2':
-                    image_features = self.backbone.get_image_features(**processed.to(self.device))
   
             return image_features.squeeze(0).cpu()
             

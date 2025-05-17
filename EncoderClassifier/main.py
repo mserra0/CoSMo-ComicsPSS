@@ -18,6 +18,7 @@ import json
 import random
 import pandas as pd
 import yaml
+import argparse
 
 def set_all_seeds(seed=10):
     random.seed(seed)
@@ -40,7 +41,7 @@ def print_class_distribution(dataset_name, json_file):
     for category, count in categories.items():
         print(f"  - {category}: {count/sum(categories.values()):.2f}")
 
-def main(run, train=True, lr = 1e-4, dropout_p=0.4, epochs = 10, batch_size=32, model_id='openai/clip-vit-large-patch14', 
+def main(run, train=True, precompute = False, lr = 1e-4, dropout_p=0.4, epochs = 10, batch_size=32, model_id='openai/clip-vit-large-patch14', 
          seed=10, augmentations = False, num_aug_copies = 5, num_synthetic_books=200, 
          num_attention_heads = 4, num_hidden_layers = 4, positional_embeddings = 'absolute', hidden_dim = 256,
          model_name = 'BookBERT', warmup = 44, initial_lr = 1e-6):
@@ -60,34 +61,38 @@ def main(run, train=True, lr = 1e-4, dropout_p=0.4, epochs = 10, batch_size=32, 
     
     print(f"Loading model: {model_id}")
     
-    backbone_name = model_id.split('/')[1].split('-')[0]
+    parts = model_id.split('/')[1].split('-')
+    backbone_name = f'{parts[0]}_{parts[-1]}'
     
-    if backbone_name == 'siglip2':
-        backbone = AutoModel.from_pretrained(model_id, device_map="auto").eval()
+    backbone = AutoModel.from_pretrained(model_id).eval()
+    
+    if 'siglip2' in backbone_name:
         processor = SiglipImageProcessor.from_pretrained(model_id)
     else:
-        backbone = AutoModel.from_pretrained(model_id)
         processor = AutoProcessor.from_pretrained(model_id)
         
     backbone.to(device)
     
-    
-    if backbone_name == 'dinov2':
-        num_features = backbone.config.hidden_size
-    elif backbone_name == 'clip' or backbone_name == 'siglip' or backbone_name == 'siglip2':
-        num_features = backbone.config.vision_config.hidden_size
+    if 'dinov2' in backbone_name:
+        feature_dim = backbone.config.hidden_size
+    elif 'clip' in backbone_name or 'siglip' in backbone_name:
+        feature_dim = backbone.config.vision_config.hidden_size
     else:
         raise ValueError(f"Warning: Unknown backbone '{backbone_name}'")
+    
+    print(f'Loaded {backbone_name} with feature dim {feature_dim}')
     
     transformations = ComicTransform()
     
     train_dataset = PSSDataset(root_dir=root_dir, 
                                model_id = model_id,
                                backbone=backbone, 
+                               backbone_name = backbone_name,
+                               feature_dim = feature_dim,
                                processor=processor, 
                                device=device, 
                                annotations_path=f'{data_dir}/comics_train.json', 
-                               precompute_features=True,
+                               precompute_features=precompute,
                                precompute_dir=f'{precompute_dir}/features_train.pt', 
                                augment_data=augmentations,
                                num_augmented_copies = num_aug_copies,
@@ -99,24 +104,28 @@ def main(run, train=True, lr = 1e-4, dropout_p=0.4, epochs = 10, batch_size=32, 
                                synthetic_remove_p=0.15)
     
     val_dataset = PSSDataset(root_dir=root_dir, 
-                             model_id = model_id,
-                                backbone=backbone, 
-                                processor=processor, 
-                                device=device, 
-                                annotations_path=f'{data_dir}/comics_val.json', 
-                                precompute_features=True,
-                                precompute_dir=f'{precompute_dir}/features_val.pt', 
-                                augment_data=False)
+                            model_id = model_id,
+                            backbone=backbone,
+                            backbone_name = backbone_name, 
+                            feature_dim = feature_dim,
+                            processor=processor, 
+                            device=device, 
+                            annotations_path=f'{data_dir}/comics_val.json', 
+                            precompute_features=precompute,
+                            precompute_dir=f'{precompute_dir}/features_val.pt', 
+                            augment_data=False)
     
     test_dataset = PSSDataset(root_dir=root_dir, 
-                              model_id = model_id,
-                               backbone=backbone, 
-                               processor=processor, 
-                               device=device, 
-                               annotations_path=f'{data_dir}/comics_test.json', 
-                               precompute_features=True,
-                               precompute_dir=f'{precompute_dir}/features_test.pt', 
-                               augment_data=False)
+                            model_id = model_id,
+                            backbone=backbone, 
+                            backbone_name = backbone_name,
+                            feature_dim = feature_dim,
+                            processor=processor, 
+                            device=device, 
+                            annotations_path=f'{data_dir}/comics_test.json', 
+                            precompute_features=precompute,
+                            precompute_dir=f'{precompute_dir}/features_test.pt', 
+                            augment_data=False)
 
     # visualize_book(train_dataset, book_id='synthetic_1', book_idx=None, output_path=f"{out_dir}/book_sample.png", dpi=300, transforms=None)
     # visualize_book(train_dataset, book_id='synthetic_2', book_idx=None, output_path=f"{out_dir}/book_sample1.png", dpi=300, transforms=None)
@@ -138,7 +147,7 @@ def main(run, train=True, lr = 1e-4, dropout_p=0.4, epochs = 10, batch_size=32, 
     
     num_classes = train_dataset.get_num_classes()
     
-    model = BookBERT(num_features = num_features, num_classes=num_classes, hidden_dim=hidden_dim, num_attention_heads=num_attention_heads,
+    model = BookBERT(feature_dim = feature_dim, num_classes=num_classes, hidden_dim=hidden_dim, num_attention_heads=num_attention_heads,
                      num_hidden_layers=num_hidden_layers, dropout_p=dropout_p, positional_embeddings=positional_embeddings)
     
     if train:
@@ -294,7 +303,7 @@ def run_sweep():
         run.finish() 
     return 0
 
-def find_best_params(out_file='./configs/best_params', project_name='my-first-sweep'):
+def find_best_params(out_file='./configs/best_params', project_name='my-first-sweep', sweep_id=None):
     print(f"\nFinding best parameters for sweep '{sweep_id}' in project '{project_name}'...")
     try:
         
@@ -348,42 +357,30 @@ if __name__ == "__main__":
     
     # best_params = find_best_params(out_file=out_file)
     
-    '''
-    Backbone Models:
-    'openai/clip-vit-large-patch14'
-    'openai/clip-vit-large-patch14-336'
-    "google/siglip-so400m-patch14-384"
-    'facebook/dinov2-base'
-    'google/siglip2-large-patch16-512'
-    '''
+    parser = argparse.ArgumentParser(description='Train BookBERT model')
+    parser.add_argument('--config', type=str, default='configs/siglip_config.yaml', 
+                        required=True,
+                        help='Path to the configuration file')
+    parser.add_argument('--train', action='store_true', default=False,
+                        help='Whether to train the model')
+    parser.add_argument('--precompute', action='store_true', default=False,
+                    help='Whether to precompute the backbone features')
+
+    args = parser.parse_args()
+    
+    with open(args.config, 'r') as f:
+        config_data = yaml.safe_load(f)
     
     run = wandb.init(
-        project="BookBERT",
-        name="clip_14_336",
-        config={
-            "lr": 1e-3,
-            "architecture": "ClipLPbase",
-            "dataset": "DCM small",
-            "epochs": 200,
-            "dropout": 0.2,
-            "batch_size": 32, 
-            "model_id": 'openai/clip-vit-large-patch14-336', 
-            'seed' : 10,
-            'augmentations' : False,
-            'num_aug_copies' : 4,
-            'num_synth_books' : 500,
-            'num_attention_heads' : 4,
-            'num_hidden_layers' : 4,
-            'positional_embeddings' : 'absolute',
-            'hidden_dim' : 256,
-            'warmup' : 44,
-            'initial_lr' : 1e-6
-            },
-        )
-
+        project=config_data["project"],
+        name=config_data["name"],
+        config=config_data["config"]
+    )
+    
     main(run,
         model_name=run.name,
-        train=True, 
+        train=args.train, 
+        precompute=args.precompute,
         lr = run.config.lr, 
         dropout_p=run.config.dropout, 
         epochs = run.config.epochs,
