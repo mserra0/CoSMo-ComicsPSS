@@ -14,6 +14,7 @@ CLIP&SigLIP/LinearProbe/predictions
 EncoderClassifier/out
 EncoderClassifier/data
 EncoderClassifier/checkpoints
+EncoderClassifier/models/best_model.pt
 
 Statistics/data
 Statistics/models

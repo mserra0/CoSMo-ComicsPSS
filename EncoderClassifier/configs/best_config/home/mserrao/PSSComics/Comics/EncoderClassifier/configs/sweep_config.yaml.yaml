@@ -1,0 +1,16 @@
+augmentations: true
+batch_size: 32
+dataset: DCM small
+dropout_p: 0.2564819282555406
+epochs: 200
+hidden_dim: 512
+initial_lr: 3.628873515651448e-07
+lr: 0.0007960229143475697
+model_id: openai/clip-vit-large-patch14
+num_attention_heads: 2
+num_aug_copies: 6
+num_hidden_layers: 6
+num_synth_books: 1000
+positional_embeddings: absolute
+seed: 10
+warmup: 80

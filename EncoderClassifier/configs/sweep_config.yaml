@@ -1,0 +1,43 @@
+method: bayes             
+metric:
+  name: val_f1          
+  goal: maximize         
+parameters:
+  lr:
+    distribution: log_uniform_values
+    min: 5e-4
+    max: 1e-3
+  dropout_p:
+    distribution: uniform
+    min: 0.1
+    max: 0.5
+  batch_size:
+    values: [16, 32]      
+  num_attention_heads:
+    values: [2, 4, 8]
+  num_hidden_layers:
+    values: [2, 4, 6]
+  hidden_dim:
+    values: [128, 256, 512]
+  warmup:                 
+    values: [20, 44, 80, 120]
+  initial_lr:             
+    distribution: log_uniform_values
+    min: 1e-7
+    max: 1e-5
+  positional_embeddings:
+    values: ['absolute', 'relative']
+  dataset:
+    value: "DCM small"
+  epochs:
+    value: 200
+  model_id:
+    value: 'openai/clip-vit-large-patch14'
+  seed:
+    value: 10
+  augmentations:
+    value: True
+  num_aug_copies:
+    value: 6
+  num_synth_books:
+    value: 1000
