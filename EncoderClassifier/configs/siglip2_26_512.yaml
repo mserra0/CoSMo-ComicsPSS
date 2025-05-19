@@ -3,15 +3,15 @@ name: "siglip2"
 config:
   lr: 1e-3
   architecture: "ClipLPbase"
-  dataset: "DCM small"
+  dataset: "DCM 400"
   epochs: 200
   dropout: 0.2
   batch_size: 32
   model_id: "google/siglip2-large-patch16-512"
   seed: 10
-  augmentations: false
-  num_aug_copies: 4
-  num_synth_books: 500
+  augmentations: True
+  num_aug_copies: 5
+  num_synth_books: 1000
   num_attention_heads: 4
   num_hidden_layers: 4
   positional_embeddings: "absolute"

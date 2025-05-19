@@ -161,7 +161,7 @@ class PSSDataset(Dataset):
                     if len(self.features_cache) != len(self.books):
                         print(f"Cache size mismatch ({len(self.features_cache)}) vs dataset size ({len(self.books)}). Recomputing.")
                         raise Exception('Size mismatch!')
-                    # print(f'Features cache Example: {self.features_cache[0]} shape {self.features_cache[0].shape}')
+                    print(f'Features cache Example shape {self.features_cache[0].shape}')
                 except Exception as e:
                     print(f'Error loading precompute features from {cache_path}: {e}')
                     self._precompute_all_features(cache_path)

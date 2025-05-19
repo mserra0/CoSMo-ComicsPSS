@@ -3,7 +3,7 @@ name: "clip_large"
 config:
   lr: 1e-3
   architecture: "ClipLPbase"
-  dataset: "DCM small"
+  dataset: "DCM 400"
   epochs: 200
   dropout: 0.2
   batch_size: 32

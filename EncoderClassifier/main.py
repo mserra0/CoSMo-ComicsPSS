@@ -75,7 +75,9 @@ def main(run, train=True, precompute = False, lr = 1e-4, dropout_p=0.4, epochs =
     
     if 'dinov2' in backbone_name:
         feature_dim = backbone.config.hidden_size
-    elif 'clip' in backbone_name or 'siglip' in backbone_name:
+    elif 'clip' in backbone_name:
+        feature_dim = backbone.config.vision_config.projection_dim
+    elif 'siglip' in backbone_name:
         feature_dim = backbone.config.vision_config.hidden_size
     else:
         raise ValueError(f"Warning: Unknown backbone '{backbone_name}'")
@@ -381,7 +383,7 @@ if __name__ == "__main__":
         model_name=run.name,
         train=args.train, 
         precompute=args.precompute,
-        lr = run.config.lr, 
+        lr = float(run.config.lr), 
         dropout_p=run.config.dropout, 
         epochs = run.config.epochs,
         batch_size=run.config.batch_size,
@@ -395,4 +397,5 @@ if __name__ == "__main__":
         positional_embeddings = run.config.positional_embeddings,
         hidden_dim = run.config.hidden_dim,
         warmup=run.config.warmup,
-        initial_lr=run.config.initial_lr)
+        initial_lr=float(run.config.initial_lr)
+    )
