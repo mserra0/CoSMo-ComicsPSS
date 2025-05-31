@@ -1,0 +1,20 @@
+project: "BookBERT"
+name: "siglip2+detections"
+config:
+  lr: 1e-5
+  architecture: "BB+Detections"
+  dataset: "DCM 400"
+  epochs: 200
+  dropout: 0.4
+  batch_size: 64
+  model_id: "google/siglip2-large-patch16-512"
+  seed: 10
+  augmentations: False
+  num_aug_copies: 5
+  num_synth_books: 1000
+  num_attention_heads: 4
+  num_hidden_layers: 4
+  positional_embeddings: "absolute"
+  hidden_dim: 512
+  warmup: 44
+  initial_lr: 1e-6

@@ -1,5 +1,5 @@
 import torch
-from utils.metrics import calculate_mndd, get_breaking_points
+from .metrics import calculate_mndd, get_breaking_points
 import os
 import math
 import numpy as np
@@ -8,6 +8,9 @@ import tqdm
 import matplotlib.pyplot as plt
 from PIL import Image
 from matplotlib.patches import Patch
+import seaborn as sns
+import pandas as pd
+from collections import Counter
 
 def visualize_book(dataset, book_id=None, book_idx=None, output_path=None, max_cols=5, figsize=(15, 20), dpi=300, transforms=None):
     print('Creating visualization...')
@@ -80,8 +83,8 @@ def visualize_book(dataset, book_id=None, book_idx=None, output_path=None, max_c
     
     if output_path:
         os.makedirs(os.path.dirname(output_path), exist_ok=True)
-        plt.savefig(output_path)
-        print(f"Saved visualization to {output_path}")
+        plt.savefig(f'{output_path}/{book_id}')
+        print(f"Saved visualization to {output_path}/{book_id}")
     
     return fig
 
@@ -239,14 +242,17 @@ def save_artifacts(model, test_dataset, test_loader, device, top_n=5, output_dir
     model.eval()
     with torch.no_grad():
         for batch_idx, batch in enumerate(tqdm.tqdm(test_loader, desc="Evaluating segmentation")):
-            features = batch['features'].to(device)
+            fusion_features_batch = batch['features']
+            features_on_device = {
+                bb_name: tensor.to(device) for bb_name, tensor in fusion_features_batch.items()
+            }
             attention_mask = batch['attention_mask'].to(device)
             page_labels = batch['page_labels'].to(device)
         
             book_ids = batch['book_id'] if 'book_id' in batch else None
             
-            logits = model(features, attention_mask)
-            batch_size = features.shape[0]
+            logits = model(features_on_device, attention_mask)
+            batch_size = page_labels.shape[0]
             
             predictions = logits.argmax(dim=2)
             
@@ -374,3 +380,193 @@ def save_artifacts(model, test_dataset, test_loader, device, top_n=5, output_dir
             print(f"Error visualizing predictions for book {book_id}: {e}")
     
     return worst_books, all_figs
+
+def analyze_book_types(dataset):
+    """
+    Analyzes and visualizes distributions and statistics for original, augmented, and synthetic books in a PSSDataset.
+    
+    Args:
+        dataset (PSSDataset): Your PSSDataset object.
+    """
+    # Set up plotting style
+    plt.style.use('default')
+    sns.set_palette("husl")
+    
+    # Extract data for analysis
+    data = []
+    class_names = dataset.get_class_names()
+    
+    for book in dataset.books:
+        # Determine book type
+        source = book['metadata']['source']
+        if source == 'original':
+            book_type = 'original'
+        elif '_aug_' in book['book_id']:
+            book_type = 'augmented'
+        else:
+            book_type = 'synthetic'
+        
+        # Calculate metrics
+        page_labels = book['page_labels']
+        total_pages = len(page_labels)
+        
+        # Count stories (including first-page)
+        story_pages = sum(1 for label in page_labels 
+                         if label in [dataset.class_to_idx['story'], dataset.class_to_idx['first-page']])
+        
+        # Count each page type
+        label_counts = Counter(page_labels)
+        
+        # Count number of story sequences
+        num_stories = 0
+        in_story = False
+        for label in page_labels:
+            if label == dataset.class_to_idx['first-page']:
+                num_stories += 1
+                in_story = True
+            elif label == dataset.class_to_idx['story'] and not in_story:
+                num_stories += 1
+                in_story = True
+            elif label != dataset.class_to_idx['story'] and label != dataset.class_to_idx['first-page']:
+                in_story = False
+        
+        data.append({
+            'book_id': book['book_id'],
+            'type': book_type,
+            'total_pages': total_pages,
+            'story_pages': story_pages,
+            'num_stories': num_stories,
+            'avg_story_length': story_pages / max(num_stories, 1),
+            'cover_pages': label_counts.get(dataset.class_to_idx['cover'], 0),
+            'ad_pages': label_counts.get(dataset.class_to_idx['advertisement'], 0),
+            'textstory_pages': label_counts.get(dataset.class_to_idx['textstory'], 0),
+            'first_pages': label_counts.get(dataset.class_to_idx['first-page'], 0)
+        })
+    
+    df = pd.DataFrame(data)
+    
+    # Create comprehensive visualization
+    fig = plt.figure(figsize=(20, 15))
+    
+    # 1. Book length distribution
+    plt.subplot(3, 3, 1)
+    sns.histplot(data=df, x='total_pages', hue='type', kde=True, alpha=0.7)
+    plt.title('Book Length Distribution (Total Pages)')
+    plt.xlabel('Number of Pages')
+    plt.ylabel('Count')
+    
+    # 2. Story pages distribution
+    plt.subplot(3, 3, 2)
+    sns.histplot(data=df, x='story_pages', hue='type', kde=True, alpha=0.7)
+    plt.title('Story Content Distribution (Story Pages)')
+    plt.xlabel('Number of Story Pages')
+    plt.ylabel('Count')
+    
+    # 3. Number of stories per book
+    plt.subplot(3, 3, 3)
+    sns.histplot(data=df, x='num_stories', hue='type', kde=True, alpha=0.7)
+    plt.title('Number of Stories per Book')
+    plt.xlabel('Number of Stories')
+    plt.ylabel('Count')
+    
+    # 4. Average story length
+    plt.subplot(3, 3, 4)
+    sns.histplot(data=df, x='avg_story_length', hue='type', kde=True, alpha=0.7)
+    plt.title('Average Story Length')
+    plt.xlabel('Average Pages per Story')
+    plt.ylabel('Count')
+    
+    # 5. Box plots for comparison
+    plt.subplot(3, 3, 5)
+    sns.boxplot(data=df, x='type', y='total_pages')
+    plt.title('Book Length by Type (Box Plot)')
+    plt.ylabel('Total Pages')
+    
+    # 6. Advertisement pages distribution
+    plt.subplot(3, 3, 6)
+    sns.histplot(data=df, x='ad_pages', hue='type', kde=True, alpha=0.7)
+    plt.title('Advertisement Pages Distribution')
+    plt.xlabel('Number of Ad Pages')
+    plt.ylabel('Count')
+    
+    # 7. Text story pages distribution
+    plt.subplot(3, 3, 7)
+    sns.histplot(data=df, x='textstory_pages', hue='type', kde=True, alpha=0.7)
+    plt.title('Text Story Pages Distribution')
+    plt.xlabel('Number of Text Story Pages')
+    plt.ylabel('Count')
+    
+    # 8. Cover pages distribution
+    plt.subplot(3, 3, 8)
+    sns.histplot(data=df, x='cover_pages', hue='type', kde=True, alpha=0.7)
+    plt.title('Cover Pages Distribution')
+    plt.xlabel('Number of Cover Pages')
+    plt.ylabel('Count')
+    
+    # 9. Story vs Non-story ratio
+    plt.subplot(3, 3, 9)
+    df['story_ratio'] = df['story_pages'] / df['total_pages']
+    sns.histplot(data=df, x='story_ratio', hue='type', kde=True, alpha=0.7)
+    plt.title('Story Content Ratio')
+    plt.xlabel('Story Pages / Total Pages')
+    plt.ylabel('Count')
+    
+    
+    plt.tight_layout()
+    plt.show()
+    
+    # Print summary statistics
+    print("="*80)
+    print("SUMMARY STATISTICS BY BOOK TYPE")
+    print("="*80)
+    
+    for book_type in ['original', 'augmented', 'synthetic']:
+        if book_type in df['type'].values:
+            type_data = df[df['type'] == book_type]
+            print(f"\n{book_type.upper()} BOOKS ({len(type_data)} books):")
+            print("-" * 50)
+            
+            metrics = ['total_pages', 'story_pages', 'num_stories', 'avg_story_length', 
+                      'ad_pages', 'textstory_pages', 'cover_pages']
+            
+            for metric in metrics:
+                values = type_data[metric]
+                print(f"{metric:20s}: mean={values.mean():.2f}, std={values.std():.2f}, "
+                      f"min={values.min():.2f}, max={values.max():.2f}")
+    
+    # Statistical comparison
+    print("\n" + "="*80)
+    print("STATISTICAL COMPARISONS")
+    print("="*80)
+    
+    from scipy import stats
+    
+    # Compare means between book types
+    metrics_to_compare = ['total_pages', 'story_pages', 'num_stories', 'avg_story_length']
+    
+    book_types = df['type'].unique()
+    for metric in metrics_to_compare:
+        print(f"\n{metric.upper()}:")
+        for i, type1 in enumerate(book_types):
+            for type2 in book_types[i+1:]:
+                data1 = df[df['type'] == type1][metric]
+                data2 = df[df['type'] == type2][metric]
+                
+                if len(data1) > 0 and len(data2) > 0:
+                    t_stat, p_value = stats.ttest_ind(data1, data2)
+                    print(f"  {type1} vs {type2}: t={t_stat:.3f}, p={p_value:.4f}")
+    
+    # Page type distribution comparison
+    print("\n" + "="*80)
+    print("PAGE TYPE DISTRIBUTION BY BOOK TYPE")
+    print("="*80)
+    
+    page_type_cols = ['cover_pages', 'story_pages', 'ad_pages', 'textstory_pages']
+    page_dist = df.groupby('type')[page_type_cols].mean()
+    print(page_dist.round(2))
+    
+    return df
+
+# Usage example:
+# dataset = PSSDataset(...)  # your dataset
+# analysis_df = analyze_book_types(dataset)

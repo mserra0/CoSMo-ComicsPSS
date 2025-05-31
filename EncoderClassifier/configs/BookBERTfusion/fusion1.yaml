@@ -1,0 +1,21 @@
+project: "BookBERT"
+name: "BookBERTfusion1" 
+config:
+  lr: 1e-5
+  architecture: "BBFusion"
+  dataset: "DCM 400"
+  dropout: 0.3       
+  epochs: 200
+  batch_size: 64
+  seed: 10
+  augmentations: false
+  num_aug_copies: 5
+  num_synth_books: 1000
+  warmup: 44
+  initial_lr: 5e-7
+  num_attention_heads: 8
+  num_hidden_layers: 6
+  positional_embeddings: "absolute"
+  hidden_dim: 512         
+  projection_dim: 1024  
+  bert_input_dim: 768

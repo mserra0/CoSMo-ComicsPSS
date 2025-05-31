@@ -23,13 +23,14 @@ class PSSDataset(Dataset):
         device="cuda" if torch.cuda.is_available() else "cpu",
         precompute_features=True,
         precompute_dir=None,
+        batch_size = 34,
         transform=None,
         filter_unknown=True,
         # --- Augmentation Parameters ---
         augment_data=False,            
         num_augmented_copies=1,      
         augmentation_shuffle_stories=True, 
-        removal_p = 0.05,
+        removal_p = 0.0,
         num_synthetic_books=0,       
         min_stories = 3,
         max_stories = 5,
@@ -164,10 +165,10 @@ class PSSDataset(Dataset):
                     print(f'Features cache Example shape {self.features_cache[0].shape}')
                 except Exception as e:
                     print(f'Error loading precompute features from {cache_path}: {e}')
-                    self._precompute_all_features(cache_path)
+                    self._precompute_all_features(cache_path, batch_size=batch_size)
             else:
                 print(f'Perecomputing all {self.backbone_name} features and loading it in {cache_path}!')
-                self._precompute_all_features(cache_path)
+                self._precompute_all_features(cache_path, batch_size=batch_size)
     
     def _find_book_annotations(self, book_id):
         for key in [book_id, book_id.split('_')[0] if '_' in book_id else None]:
@@ -237,6 +238,7 @@ class PSSDataset(Dataset):
                 end_page = item.get("page_end", start_page)
                 
                 if category == "stories":
+                    title = item['title']
                     first_page_marked = False
                     
                     for i in range(num_pages):
@@ -247,8 +249,8 @@ class PSSDataset(Dataset):
                                 break
 
                         if page_num is not None and start_page <= page_num <= end_page:
-                        
-                            if page_num == start_page:
+                            # Altough not ideal we will skip storys containing the word 'continue' in the title asstand alone stories
+                            if page_num == start_page and 'continue' not in title: 
                                 page_labels[i] = first_page_idx
                                 first_page_marked = True
                             else:
@@ -275,63 +277,107 @@ class PSSDataset(Dataset):
             print('No image number found.')
             return 0
         
-    def _extract_features(self, image_path):
-        try:
-            image = Image.open(image_path).convert('RGB')
+        
+    def _extract_features_batch(self, image_paths, batch_size=32):
+        """Optimized batch feature extraction with better CPU-GPU overlap"""
+        all_features = []
+        
+        for i in tqdm.tqdm(range(0, len(image_paths), batch_size), 
+                        desc="Extracting features", unit="batch"):
+            batch_paths = image_paths[i:i + batch_size]
             
-            if self.transform:
-                image = self.transform(image)
+            # Pre-filter valid paths to avoid processing errors later
+            valid_paths = []
+            for path in batch_paths:
+                if os.path.exists(path) and self._quick_image_check(path):
+                    valid_paths.append(path)
+                else:
+                    all_features.append(torch.zeros(self.feature_dim))
             
-            inputs = {}
-            pixel_values = {}
+            if not valid_paths:
+                continue
                 
-            if 'siglip2' in self.backbone_name:
-                inputs = self.processor(images=[image], return_tensors="pt").to(self.device)
-            else:
-                processed = self.processor(images=image, return_tensors="pt")
-                pixel_values = processed['pixel_values'].to(self.device)
+            try:
+                # Load and preprocess all images at once (vectorized)
+                batch_images = []
+                for path in valid_paths:
+                    image = Image.open(path).convert('RGB')
+                    batch_images.append(image)
                 
-            image_features = torch.zeros(self.feature_dim)
-            
-            with torch.no_grad():
-                if 'clip' in self.backbone_name:
-                    image_features = self.backbone.get_image_features(pixel_values=pixel_values)
+                # Process entire batch through backbone in one forward pass
+                with torch.no_grad():                    
+                    if 'siglip2' in self.backbone_name:
+                        inputs = self.processor(images=batch_images, return_tensors="pt").to(self.device, non_blocking=True)
+                        inputs = {k: v.to(self.device, non_blocking=True) for k, v in inputs.items()}
+                        batch_features = self.backbone.get_image_features(**inputs)
+                        
+                    elif 'clip' in self.backbone_name:
+                        inputs = self.processor(images=batch_images, return_tensors="pt")
+                        pixel_values = inputs['pixel_values'].to(self.device, non_blocking=True)
+                        batch_features = self.backbone.get_image_features(pixel_values=pixel_values)
+                        
+                    elif 'siglip' in self.backbone_name:
+                        inputs = self.processor(images=batch_images, return_tensors="pt")
+                        pixel_values = inputs['pixel_values'].to(self.device, non_blocking=True)
+                        batch_features = self.backbone.vision_model(pixel_values=pixel_values).pooler_output
+                        
+                    elif 'dinov2' in self.backbone_name:
+                        processed = self.processor(images=batch_images, return_tensors="pt")
+                        pixel_values = processed['pixel_values'].to(self.device, non_blocking=True)
+                        outputs = self.backbone(pixel_values)
+                        batch_features = outputs.last_hidden_state[:, 0]
+                        
+                    # Move to CPU immediately to free GPU memory
+                    batch_features_cpu = batch_features.cpu()
+                    all_features.extend([feat for feat in batch_features_cpu])
                     
-                elif 'siglip2' in self.backbone_name:
-                    image_features = self.backbone.get_image_features(**inputs)
-                    
-                elif 'siglip' in self.backbone_name:
-                    image_features = self.backbone.vision_model(pixel_values=pixel_values).pooler_output
+            except Exception as e:
+                print(f"Error processing batch starting at {i}: {str(e)}")
+                # Add zero features for failed batch
+                for _ in valid_paths:
+                    all_features.append(torch.zeros(self.feature_dim))
+        
+        return all_features
 
-                elif 'dinov2' in self.backbone_name:
-                    outputs = self.backbone(pixel_values)
-                    image_features = outputs.last_hidden_state[:, 0]
-  
-            return image_features.squeeze(0).cpu()
-            
-        except Exception as e:
-            print(f"Error processing {image_path}: {str(e)}")
-            return torch.zeros(self.feature_dim)
+    def _quick_image_check(self, path):
+        """Quick file existence and basic validation"""
+        try:
+            return os.path.exists(path) and os.path.getsize(path) > 0
+        except:
+            return False
     
-    def _precompute_all_features(self, save_path=None):
+    
+    def _precompute_all_features(self, save_path=None, batch_size=34):
         print(f"Precomputing {self.backbone_name} features for all book pages...")
         
-        for book_idx, book in enumerate(tqdm.tqdm(self.books)):
-            book_features = []
-                    
-            for img_path in book['image_paths']:
-                book_features.append(self._extract_features(img_path))
-                
-            if book_features:  
+        all_image_paths = []
+        book_boundaries = []  # Store (start_idx, end_idx, book_idx) for each book
+        current_idx = 0
+        
+        for book_idx, book in enumerate(self.books):
+            start_idx = current_idx
+            book_paths = book['image_paths']
+            all_image_paths.extend(book_paths)
+            current_idx += len(book_paths)
+            book_boundaries.append((start_idx, current_idx, book_idx))
+            
+        print(f"Processing {len(all_image_paths)} images across {len(self.books)} books...")
+        
+        all_features = self._extract_features_batch(all_image_paths, batch_size)
+        
+        for start_idx, end_idx, book_idx in tqdm.tqdm(book_boundaries, desc="Organizing features by book"):
+            book_features = all_features[start_idx:end_idx]
+            
+            if book_features:
                 self.features_cache[book_idx] = torch.stack(book_features)
-                
+        
         if save_path:
             print(f"Saving precomputed features to {save_path}")
             os.makedirs(os.path.dirname(save_path), exist_ok=True)
             torch.save(self.features_cache, save_path)
         
         print("Feature precomputation complete!")
-        
+            
     def _augment_books(self, num_copies=1, shuffle_stories=True, removal_p = 0.05):
         augmented_books = []
         cover_idx = self.class_to_idx.get("cover", -1)
@@ -363,18 +409,12 @@ class PSSDataset(Dataset):
                     elif i == 0 and not cover_pages:
                         cover_pages.append((path, label))
                     else:
-                       
-                        current_block_type = None
-                        if label == story_idx or label == first_page_idx:
-                            current_block_type = story_idx 
-                        else:
-                            current_block_type = label
-                            
-                        if current_block_type != current_type:
+                
+                        if label != current_type:
                             if current_block:
                                 content_blocks.append((current_type, current_block))
                             current_block = []
-                            current_type = current_block_type
+                            current_type = label
                         current_block.append((path, label))
                                 
                 if current_block:
@@ -383,26 +423,17 @@ class PSSDataset(Dataset):
                 processed_blocks = []
                 for block_type, block in content_blocks:
                     if block_type == story_idx and len(block) > 1 and shuffle_stories:
-                        
-                        first_page = block[0]
-                        first_page_path, first_page_label = first_page
-                        
-                        if first_page_label != first_page_idx:
-                            first_page = (first_page_path, first_page_idx)
-                            
-                        rest_pages = block[1:]
-                        random.shuffle(rest_pages)
-                        rest_pages = [element for element in rest_pages if random.random() >= removal_p]
-                        
-                        rest_pages = [(path, story_idx) for path, _ in rest_pages]
-                        
-                        processed_blocks.append((block_type, [first_page] + rest_pages))
-                    else:
+                        shuffled_block = block.copy()
+                        random.shuffle(shuffled_block)
+                        shuffled_block = [element for element in shuffled_block if random.random() >= removal_p]
+                        processed_blocks.append((block_type, shuffled_block))
+                    else: 
+                        # including first_page_idx
                         processed_blocks.append((block_type, block))
                 
                 if shuffle_stories:
                     story_blocks = [(i, block) for i, (block_type, block) in enumerate(processed_blocks) 
-                                if block_type == story_idx]
+                                if block_type == story_idx and len(block) > 3] # in order to keep small stroies in the same position
                     
                     if story_blocks:
                         story_indices = [idx for idx, _ in story_blocks]
@@ -442,7 +473,7 @@ class PSSDataset(Dataset):
         
         return augmented_books
     
-    def _create_synthetic_books(self, num_books=100, removal_p=0.1):
+    def _create_synthetic_books(self, num_books=100, removal_p=0.1, min_stories_per_block = 1, max_stories_per_block=3):
         synthetic_books = []
         
         cover_idx = self.class_to_idx["cover"]
@@ -456,22 +487,23 @@ class PSSDataset(Dataset):
         ad_blocks = []
         textstory_blocks = []
         
-        current_type = None
-        current_block = []
-        
         print("Categorizing pages for synthetic book creation...")
         original_books = self.books[:self.original_books_len]
-    
+
         for book in tqdm.tqdm(original_books, desc="Categorizing pages"):
             current_type = None
             current_block = []
+            
             for i, (path, label) in enumerate(zip(book['image_paths'], book['page_labels'])):
                 if label == cover_idx:
                     cover_pages.append(path)
                 elif i == 0 and not cover_pages:
                     cover_pages.append(path)
                 else:
-                    if label != current_type:
+                    # Group story and first-page together as story blocks
+                    block_type = story_idx if label in [story_idx, first_page_idx] else label
+                    
+                    if block_type != current_type:
                         if current_block:
                             if current_type == story_idx:
                                 story_blocks.append(current_block)
@@ -481,7 +513,7 @@ class PSSDataset(Dataset):
                                 textstory_blocks.append(current_block)
                             
                         current_block = []
-                        current_type = label
+                        current_type = block_type
                     current_block.append(path)  
             
             if current_block:
@@ -501,25 +533,24 @@ class PSSDataset(Dataset):
             new_image_paths.append(cover_path)
             new_page_labels.append(cover_idx)
             
-            # Create copies to avoid modifying originals
             available_stories = story_blocks.copy()
             available_ads = ad_blocks.copy()
             available_textstories = textstory_blocks.copy()
             
-            num_stories = min(random.randint(self.min_stories, self.max_stories), len(available_stories))
+            num_story_blocks = min(random.randint(self.min_stories, self.max_stories), len(available_stories))
             
-            for _ in range(num_stories):
-                # Add a story
-                if not available_stories:
-                    break
-                    
-                idx = random.randrange(len(available_stories))
-                story_block = available_stories.pop(idx)
-                while len(story_block) < 3:
+            stories_added = 0
+            while stories_added < num_story_blocks and available_stories:
+                total_story_pages = 0
+                stories_added_to_block = 0
+                num_stories_per_block = min(random.randint(min_stories_per_block, max_stories_per_block), len(available_stories))
+                
+                while (stories_added_to_block < num_stories_per_block or total_story_pages < 5) and available_stories:
                     idx = random.randrange(len(available_stories))
                     story_block = available_stories.pop(idx)
                     
-                if story_block:
+                    if story_block:
+                        # First page gets first-page label, rest get story label
                         first_page = story_block[0]
                         rest_pages = story_block[1:] if len(story_block) > 1 else []
                         random.shuffle(rest_pages)
@@ -528,12 +559,17 @@ class PSSDataset(Dataset):
                         # Add first page with first-page label
                         new_image_paths.append(first_page)
                         new_page_labels.append(first_page_idx)
+                        total_story_pages += 1
                         
                         # Add rest of pages with story label
                         new_image_paths.extend(rest_pages)
                         new_page_labels.extend([story_idx] * len(rest_pages))
-                
-                # After each story, add either ads or text stories
+                        total_story_pages += len(rest_pages)
+
+                        stories_added_to_block +=1
+                        
+                stories_added += 1
+            
                 content_type = random.choice(['ad', 'text'])
                 
                 if content_type == 'ad' and available_ads:
