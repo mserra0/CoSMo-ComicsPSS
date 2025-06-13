@@ -200,3 +200,74 @@ class BookBERTfusion(nn.Module):
         logits = self.classifier(sequence_output) 
         
         return logits
+    
+class BookBERTMultimodal(BookBERT):
+    def __init__(self, 
+                 textual_feature_dim,
+                 visual_feature_dim=768, 
+                 bert_input_dim=768,
+                 projection_dim = 1024,
+                 num_hidden_layers=4,
+                 num_attention_heads=4,
+                 positional_embeddings='absolute',
+                 num_classes=4,
+                 hidden_dim=256,
+                 dropout_p=0.3
+    ):
+        super(BookBERTMultimodal, self).__init__(
+            feature_dim=visual_feature_dim,
+            bert_input=bert_input_dim,
+            num_hidden_layers=num_hidden_layers,
+            num_attention_heads=num_attention_heads,
+            positional_embeddings=positional_embeddings,
+            num_classes=num_classes,
+            hidden_dim=hidden_dim,
+            dropout_p=dropout_p
+        )
+        
+        self.textual_feature_dim = textual_feature_dim
+        self.visual_feature_dim = visual_feature_dim
+        self.projection_dim = projection_dim
+        
+        self.visual_projection = nn.Linear(self.visual_feature_dim, self.projection_dim)
+        self.textual_projection = nn.Linear(self.textual_feature_dim, self.projection_dim)
+        
+        self.norm = nn.LayerNorm(self.projection_dim)
+
+        concat_dim = 2 * self.projection_dim 
+        hidden_dims = [concat_dim * 2, concat_dim // 2, bert_input_dim]
+        
+        self.fusionMLP = nn.Sequential(
+            nn.Linear(concat_dim, hidden_dims[0]),
+            nn.LayerNorm(hidden_dims[0]),  
+            nn.GELU(), 
+            nn.Dropout(dropout_p),  
+            nn.Linear(hidden_dims[0], hidden_dims[1]), 
+            nn.LayerNorm(hidden_dims[1]), 
+            nn.GELU(),
+            nn.Dropout(dropout_p),
+            nn.Linear(hidden_dims[1], hidden_dims[2]) 
+        )
+        
+    def forward(self, textual_features, visual_features, attention_mask):
+        
+        projected_txt_features = self.textual_projection(textual_features)
+        projected_vis_features = self.visual_projection(visual_features)
+        
+        norm_projected_txt_features = self.norm(projected_txt_features)
+        norm_projected_vis_features = self.norm(projected_vis_features)
+        
+        concat_features = torch.cat([norm_projected_txt_features, norm_projected_vis_features], dim=-1)
+        
+        fused_features = self.fusionMLP(concat_features)
+
+        bert_output = self.bert_encoder(
+                inputs_embeds=fused_features,
+                attention_mask=attention_mask
+                )
+        
+        sequence_output = bert_output.last_hidden_state
+        
+        logits = self.classifier(sequence_output) 
+        
+        return logits

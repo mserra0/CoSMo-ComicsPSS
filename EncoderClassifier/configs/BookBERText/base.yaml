@@ -1,17 +1,14 @@
 project: "BookBERT"
-name: "siglip"
+name: "textual_qwen"
 config:
   lr: 1e-5
-  architecture: "ClipLPbase"
+  architecture: "TextualBERT"
   dataset: "DCM 400"
   epochs: 200
   dropout: 0.4
   batch_size: 64
-  model_id: "google/siglip-so400m-patch14-384"
   seed: 10
   augmentations: False
-  num_aug_copies: 5
-  num_synth_books: 1000
   num_attention_heads: 4
   num_hidden_layers: 4
   positional_embeddings: "absolute"
