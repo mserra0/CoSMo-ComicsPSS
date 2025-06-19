@@ -9,7 +9,7 @@ config:
   batch_size: 128
   model_id: "facebook/dinov2-base"
   seed: 10
-  augmentations: True
+  augmentations: False
   num_aug_copies: 5
   num_synth_books: 1000
   num_attention_heads: 4

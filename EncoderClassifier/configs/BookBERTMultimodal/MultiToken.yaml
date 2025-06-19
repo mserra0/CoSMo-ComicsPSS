@@ -1,15 +1,15 @@
 project: "BookBERT"
-name: "siglip2"
+name: "Multimodal MultiToken (siglip+OCR)"
 config:
   lr: 1e-5
-  architecture: "ClipLPbase"
+  architecture: "BookBERTMultimodal+MultiToken"
   dataset: "DCM 400"
-  epochs: 200
+  epochs: 400
   dropout: 0.4
   batch_size: 64
-  model_id: "google/siglip2-large-patch16-512"
+  model_id: "google/siglip-so400m-patch14-384"
   seed: 10
-  augmentations: False
+  augmentations: True
   num_aug_copies: 5
   num_synth_books: 1000
   num_attention_heads: 4
@@ -18,3 +18,5 @@ config:
   hidden_dim: 256
   warmup: 44
   initial_lr: 1e-6
+  bert_input_dim : 768
+  projection_dim : 1024

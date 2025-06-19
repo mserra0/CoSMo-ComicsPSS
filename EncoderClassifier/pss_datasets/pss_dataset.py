@@ -7,6 +7,7 @@ import tqdm
 import random 
 import copy  
 import numpy as np
+import cv2
 
 class PSSDataset(Dataset):
     
@@ -60,7 +61,7 @@ class PSSDataset(Dataset):
         self.precompute_features = precompute_features
         self.precompute_dir = precompute_dir
         self.filter_unknown = filter_unknown
-        
+        self.augment_data = augment_data
         self.backbone = backbone
         self.backbone_name = backbone_name
         self.processor = processor
@@ -301,7 +302,9 @@ class PSSDataset(Dataset):
                 # Load and preprocess all images at once (vectorized)
                 batch_images = []
                 for path in valid_paths:
-                    image = Image.open(path).convert('RGB')
+                    image = cv2.imread(path)
+                    if self.augment_data:
+                        image, description = self.transform(image)
                     batch_images.append(image)
                 
                 # Process entire batch through backbone in one forward pass
@@ -382,9 +385,6 @@ class PSSDataset(Dataset):
         augmented_books = []
         cover_idx = self.class_to_idx.get("cover", -1)
         story_idx = self.class_to_idx.get("story", -1)
-        ad_idx = self.class_to_idx.get("advertisement", -1)
-        textstory_idx = self.class_to_idx.get("textstory", -1)
-        first_page_idx = self.class_to_idx.get("first-page", -1)
         
         for i, original_book in enumerate(tqdm.tqdm(self.books, desc="Creating augmented copies")):
             for j in range(num_copies):

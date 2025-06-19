@@ -8,7 +8,9 @@ config:
   dropout: 0.4
   batch_size: 64
   seed: 10
-  augmentations: False
+  augmentations: true
+  num_aug_copies: 5
+  num_synth_books: 1000
   num_attention_heads: 4
   num_hidden_layers: 4
   positional_embeddings: "absolute"

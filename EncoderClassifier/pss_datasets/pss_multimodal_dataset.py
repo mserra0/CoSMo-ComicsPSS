@@ -70,17 +70,24 @@ class PSSMultimodalDataset(PSSDataset):
     
         for book in self.books:
             book_id = book['book_id']
-            book_path = os.path.join(root_dir, book_id)
             image_paths = book['image_paths']
             page_labels = book['page_labels']
             
-            ocr_files = [f for f in os.listdir(book_path) if f.lower().endswith(('.json'))]
-            if not ocr_files:
-                print(f"Warning: No OCRs found for book {book_id}")
-                continue
-            
-            ocr_files.sort(key=lambda x: self._get_page_number(x))
-            ocr_paths = [os.path.join(book_path, ocr) for ocr in ocr_files]
+            if augment_data:
+                ocr_paths = []
+                for img_path in image_paths:
+                    base_path = os.path.splitext(img_path)[0]
+                    ocr_path = base_path + '.json'
+                    ocr_paths.append(ocr_path)
+            else:
+                book_path = os.path.join(root_dir, book_id)
+                ocr_files = [f for f in os.listdir(book_path) if f.lower().endswith(('.json'))]
+                if not ocr_files:
+                    print(f"Warning: No OCRs found for book {book_id}")
+                    continue
+                
+                ocr_files.sort(key=lambda x: self._get_page_number(x))
+                ocr_paths = [os.path.join(book_path, ocr) for ocr in ocr_files]
             
             filtered_img_paths = []
             filtered_ocr_paths = []
@@ -103,7 +110,10 @@ class PSSMultimodalDataset(PSSDataset):
         if self.precompute_emb_dir:
             base, ext = os.path.splitext(self.precompute_emb_dir)
             cache_path = f"{base}_textual_emb{ext}"
-            
+            if augment_data:
+                aug_suffix = f"_cp{num_augmented_copies}synth{num_synthetic_books}"
+                cache_path = f"{base}{aug_suffix}_textual_emb{ext}"
+                
             if os.path.exists(cache_path) and not precompute_emb:
                 try:
                     print(f'Loading precomputed features from {cache_path}')

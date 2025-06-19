@@ -1,5 +1,5 @@
 project: "BookBERT"
-name: "Multimodal"
+name: "Multimodal Fusion (siglip+OCR)"
 config:
   lr: 1e-5
   architecture: "BookBERTMultimodal+Fusion"
@@ -9,7 +9,7 @@ config:
   batch_size: 64
   model_id: "google/siglip-so400m-patch14-384"
   seed: 10
-  augmentations: False
+  augmentations: True
   num_aug_copies: 5
   num_synth_books: 1000
   num_attention_heads: 4

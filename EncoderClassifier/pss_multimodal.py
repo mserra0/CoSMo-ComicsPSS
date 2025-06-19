@@ -12,7 +12,7 @@ import seaborn as sns
 from utils.training import compute_class_weights, train_multimodal
 from utils.metrics import calculate_mndd, panoptic_quality_metrics
 from pss_datasets.pss_multimodal_dataset import PSSMultimodalDataset
-from models.book_bert import BookBERTMultimodal
+from models.book_bert import BookBERTMultimodal, BookBERTMultimodal2
 import json
 import random
 import yaml
@@ -43,7 +43,8 @@ def print_class_distribution(dataset_name, json_file):
 
 def main(run, gpu_id = 0,train=True, lr = 1e-4, dropout_p=0.4, epochs = 10, batch_size=32, model_id='openai/clip-vit-large-patch14', 
          seed=10, num_attention_heads = 4, num_hidden_layers = 4, positional_embeddings = 'absolute', hidden_dim = 256,
-         model_name = 'BookBERT', warmup = 44, initial_lr = 1e-6, bert_input_dim = 768, projection_dim = 1024):
+         model_name = 'BookBERT', warmup = 44, initial_lr = 1e-6, bert_input_dim = 768, projection_dim = 1024, augmentations=False,
+        num_aug_copies = 5, transforms = None, num_synthetic_books = 1000):
     
     root_dir = '/home-local/mserrao/PSSComics/multimodal-comic-pss/datasets.unify/DCM/images'
     precompute_dir = '/home-local/mserrao/PSSComics/multimodal-comic-pss/EncoderClassifier/data'
@@ -115,8 +116,15 @@ def main(run, gpu_id = 0,train=True, lr = 1e-4, dropout_p=0.4, epochs = 10, batc
                         annotations_path = f'{data_dir}/comics_train.json',  
                         device=device,
                         batch_size = bb_batch_size,
+                        max_seq_length=512,
                         #  --- Augmentation Parameters --- 
-                        augment_data=False            
+                        augment_data=augmentations,
+                        num_augmented_copies = num_aug_copies,
+                        removal_p=0.05,
+                        num_synthetic_books=num_synthetic_books,
+                        min_stories=2,
+                        max_stories=3,
+                        synthetic_remove_p=0.15          
                     )
     
     val_dataset = PSSMultimodalDataset(
@@ -138,6 +146,7 @@ def main(run, gpu_id = 0,train=True, lr = 1e-4, dropout_p=0.4, epochs = 10, batc
                         annotations_path = f'{data_dir}/comics_val.json',  
                         device=device,
                         batch_size = bb_batch_size,
+                        max_seq_length=512,
                         #  --- Augmentation Parameters --- 
                         augment_data=False            
                     )
@@ -161,6 +170,7 @@ def main(run, gpu_id = 0,train=True, lr = 1e-4, dropout_p=0.4, epochs = 10, batc
                         annotations_path = f'{data_dir}/comics_test.json',  
                         device=device,
                         batch_size = bb_batch_size,
+                        max_seq_length=512,
                         #  --- Augmentation Parameters --- 
                         augment_data=False            
                     )
@@ -189,7 +199,7 @@ def main(run, gpu_id = 0,train=True, lr = 1e-4, dropout_p=0.4, epochs = 10, batc
     
     num_classes = train_dataset.get_num_classes()
     
-    model = BookBERTMultimodal(textual_feature_dim=emb_feature_dim, visual_feature_dim=bb_feature_dim, num_classes=num_classes, 
+    model = BookBERTMultimodal2(textual_feature_dim=emb_feature_dim, visual_feature_dim=bb_feature_dim, num_classes=num_classes, 
                                hidden_dim=hidden_dim, num_attention_heads=num_attention_heads, bert_input_dim=bert_input_dim,
                                projection_dim=projection_dim, num_hidden_layers=num_hidden_layers, dropout_p=dropout_p, positional_embeddings=positional_embeddings)
     
@@ -354,4 +364,7 @@ if __name__ == "__main__":
         initial_lr=float(run.config.initial_lr),
         bert_input_dim=run.config.bert_input_dim,
         projection_dim=run.config.projection_dim,
+        augmentations=run.config.augmentations,
+        num_aug_copies = run.config.num_aug_copies, 
+        num_synthetic_books = run.config.num_synth_books, 
     )

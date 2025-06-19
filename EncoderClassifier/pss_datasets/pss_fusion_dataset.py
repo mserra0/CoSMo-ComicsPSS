@@ -245,7 +245,6 @@ class PSSFusionDataset(Dataset):
         attention_mask = torch.ones(self.max_seq_len, dtype=torch.long)
         if seq_length < self.max_seq_len:
             attention_mask[seq_length:] = 0
-            
             for bb_name, bb_features in book_fussion_features.items():
                 bb_padded_features = torch.zeros(self.max_seq_len, self.backbones[bb_name], device=self.device)
                 bb_padded_features[:seq_length] = bb_features[:seq_length]

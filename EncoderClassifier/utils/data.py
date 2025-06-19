@@ -12,20 +12,31 @@ from matplotlib.patches import Patch
 class ComicTransform:
     def __init__(self):
         self.paper_colors = [(255, 255, 245), (250, 248, 239), (251, 247, 240), (252, 252, 250)]
+        self.params={}
     def __call__(self, img):
     
         orig_width, orig_height = img.size
     
         scale = random.uniform(0.98, 1.15)
+        self.params['scale'] = scale
+        
+        fill_1 = random.choice(self.paper_colors)
+        self.params['fill_1'] = fill_1
+        
+        fill_2 = random.choice(self.paper_colors)
+        self.params['fill_2'] = fill_2
+        
+        fill_3 = random.choice(self.paper_colors)
+        self.params['fill_3'] = fill_3
         
         transform_pipe = transforms.Compose([
             
-             transforms.RandomRotation(degrees=2, fill=random.choice(self.paper_colors)), 
+            transforms.RandomRotation(degrees=2, fill=fill_1), 
     
             transforms.Resize((int(orig_height * scale), int(orig_width * scale)), 
                              interpolation=transforms.InterpolationMode.BICUBIC),
             
-            transforms.RandomRotation(degrees=5, fill=random.choice(self.paper_colors)), 
+            transforms.RandomRotation(degrees=5, fill=fill_2), 
             transforms.RandomApply([
                 transforms.ColorJitter(brightness=0.2, contrast=0.3, saturation=0.2, hue=0.05)
             ], p=0.5),
@@ -34,12 +45,17 @@ class ComicTransform:
             
             transforms.Lambda(lambda x: F.adjust_sharpness(x, 0.9)),
     
-            transforms.RandomPerspective(distortion_scale=0.15, p=0.3, fill=random.choice(self.paper_colors)),
+            transforms.RandomPerspective(distortion_scale=0.15, p=0.3, fill=fill_3),
             
             transforms.CenterCrop((orig_height, orig_width))
         ])
         
-        return transform_pipe(img)
+        return transform_pipe(img), self._get_description()
+    
+    def _get_description(self):
+        description = f"Image scaled {self.params['scale']:.3f}x, wiht the following fills: {self.params['fill_1'], self.params['fill_2'], self.params['fill_3']}"
+        return description
+    
 
 def combine_json_files(output_path=None):
     json_files = [

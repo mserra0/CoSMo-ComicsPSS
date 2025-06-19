@@ -90,14 +90,14 @@ def main(run, gpu_id = 0,train=True, precompute = False, lr = 1e-4, dropout_p=0.
     print(f'Loaded {backbone_name} with feature dim {feature_dim}')
     
     transformations = ComicTransform()
-    
+    precompute_batch_size = 256
     train_dataset = PSSDataset(root_dir=root_dir, 
                                model_id = model_id,
                                backbone=backbone, 
                                backbone_name = backbone_name,
                                feature_dim = feature_dim,
                                processor=processor, 
-                               batch_size=batch_size,
+                               batch_size=precompute_batch_size,
                                device=device, 
                                annotations_path=f'{data_dir}/comics_train.json', 
                                precompute_features=precompute,
@@ -117,7 +117,7 @@ def main(run, gpu_id = 0,train=True, precompute = False, lr = 1e-4, dropout_p=0.
                             backbone_name = backbone_name, 
                             feature_dim = feature_dim,
                             processor=processor, 
-                            batch_size=batch_size,
+                            batch_size=precompute_batch_size,
                             device=device, 
                             annotations_path=f'{data_dir}/comics_val.json', 
                             precompute_features=precompute,
@@ -130,7 +130,7 @@ def main(run, gpu_id = 0,train=True, precompute = False, lr = 1e-4, dropout_p=0.
                             backbone_name = backbone_name,
                             feature_dim = feature_dim,
                             processor=processor, 
-                            batch_size=batch_size,
+                            batch_size=precompute_batch_size,
                             device=device, 
                             annotations_path=f'{data_dir}/comics_test.json', 
                             precompute_features=precompute,

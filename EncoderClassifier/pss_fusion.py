@@ -1,5 +1,5 @@
 import torch
-from transformers import SiglipImageProcessor, AutoProcessor, AutoModel
+from transformers import AutoModel
 from sklearn.metrics import confusion_matrix, classification_report
 from torch.utils.data import DataLoader
 import os
@@ -8,12 +8,11 @@ import tqdm
 import wandb
 import matplotlib.pyplot as plt
 import seaborn as sns
-from utils.data import combine_json_files, split_data, ComicTransform
-from utils.visualitzation import visualize_book, save_artifacts
+from utils.data import ComicTransform
 from utils.training import compute_class_weights, train_model_fusion
 from utils.metrics import calculate_mndd, panoptic_quality_metrics
-from datasets.pss_fusion_dataset import PSSFusionDataset
-from models.book_bert import BookBERTfusion
+from pss_datasets.pss_fusion_dataset import PSSFusionDataset
+from models.book_bert import BookBERTfusion, BookBERTMultiVision
 import json
 import random
 import pandas as pd
@@ -49,7 +48,6 @@ def main(run, gpu_id = 0,train=True, lr = 1e-4, dropout_p=0.4, epochs = 10, batc
          model_name = 'BookBERT', warmup = 44, initial_lr = 1e-6, projection_dim = 1024, bert_input_dim = 1024):
     
     root_dir = '/home-local/mserrao/PSSComics/multimodal-comic-pss/datasets.unify/DCM/images'
-    annotations_dir = '/home/mserrao/PSSComics/Comics/DatasetDCM/comics_all_430.json'
     precompute_dir = '/home-local/mserrao/PSSComics/multimodal-comic-pss/EncoderClassifier/data'
     checkpoint_dir = '/home-local/mserrao/PSSComics/multimodal-comic-pss/EncoderClassifier/checkpoints'
     data_dir = '/home-local/mserrao/PSSComics/multimodal-comic-pss/EncoderClassifier/data'
@@ -57,7 +55,7 @@ def main(run, gpu_id = 0,train=True, lr = 1e-4, dropout_p=0.4, epochs = 10, batc
     
     backbone_ids = [
         "openai/clip-vit-large-patch14-336",
-        "facebook/dinov2-base",
+        # "facebook/dinov2-base",
         "google/siglip-so400m-patch14-384",
         "google/siglip2-large-patch16-512"
     ]
@@ -149,7 +147,7 @@ def main(run, gpu_id = 0,train=True, lr = 1e-4, dropout_p=0.4, epochs = 10, batc
     
     num_classes = train_dataset.get_num_classes()
     
-    model = BookBERTfusion(backbones=backbones, num_classes=num_classes, hidden_dim=hidden_dim, num_attention_heads=num_attention_heads,
+    model = BookBERTMultiVision(backbones=backbones, num_classes=num_classes, hidden_dim=hidden_dim, num_attention_heads=num_attention_heads,
                      num_hidden_layers=num_hidden_layers, dropout_p=dropout_p, positional_embeddings=positional_embeddings,
                      projection_dim=projection_dim, bert_input_dim=bert_input_dim)
     

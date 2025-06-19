@@ -12,6 +12,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from utils.training import compute_class_weights, train_model
 from utils.metrics import calculate_mndd, panoptic_quality_metrics
+from utils.data import ComicTransform
 from pss_datasets.pss_textual_dataset import PSSTextDataset
 from models.book_bert import BookBERT
 import json
@@ -41,7 +42,8 @@ def print_class_distribution(dataset_name, json_file):
 
 def main(run, gpu_id = 0,train=True, precompute = False, lr = 1e-4, dropout_p=0.4, epochs = 10, batch_size=32, 
          seed=10, num_attention_heads = 4, num_hidden_layers = 4, positional_embeddings = 'absolute', hidden_dim = 256,
-         model_name = 'BookBERT', warmup = 44, initial_lr = 1e-6):
+         model_name = 'BookBERT', warmup = 44, initial_lr = 1e-6, augmentations = False, num_aug_copies = 5,
+         num_synthetic_books = 1000):
     
     root_dir = '/home-local/mserrao/PSSComics/multimodal-comic-pss/datasets.unify/DCM/images'
     precompute_dir = '/home-local/mserrao/PSSComics/multimodal-comic-pss/EncoderClassifier/data'
@@ -58,12 +60,14 @@ def main(run, gpu_id = 0,train=True, precompute = False, lr = 1e-4, dropout_p=0.
     
     emb_model = SentenceTransformer(
         "Qwen/Qwen3-Embedding-0.6B",
-        model_kwargs={"device_map": device},
+        device=device,
         tokenizer_kwargs={"padding_side": "left"},
         ).eval()
     
     features_dim = emb_model.get_sentence_embedding_dimension()
     emb_batch_size = 256
+    
+    transforms = ComicTransform()
     
     train_dataset = PSSTextDataset(root_dir,
                                 annotations_path = f'{data_dir}/comics_train.json',  
@@ -74,6 +78,15 @@ def main(run, gpu_id = 0,train=True, precompute = False, lr = 1e-4, dropout_p=0.
                                 precompute_features=precompute,
                                 precompute_dir=f'{precompute_dir}/train.pt',
                                 batch_size = emb_batch_size,
+                                # ------ Agmentations
+                               augment_data=augmentations,
+                               num_augmented_copies = num_aug_copies,
+                               transforms=transforms, 
+                               removal_p=0.05,
+                               num_synthetic_books=num_synthetic_books,
+                               min_stories=2,
+                               max_stories=3,
+                               synthetic_remove_p=0.15
                                 )
 
     val_dataset = PSSTextDataset(root_dir,
@@ -280,6 +293,9 @@ if __name__ == "__main__":
         epochs = run.config.epochs,
         batch_size=run.config.batch_size,
         seed = run.config.seed,
+        augmentations=run.config.augmentations,
+        num_aug_copies = run.config.num_aug_copies, 
+        num_synthetic_books = run.config.num_synth_books, 
         num_attention_heads = run.config.num_attention_heads,
         num_hidden_layers = run.config.num_hidden_layers,
         positional_embeddings = run.config.positional_embeddings,
