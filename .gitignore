@@ -7,14 +7,26 @@ DatasetDCM
 datasets.unify
 predicts.coco
 
-CLIP&SigLIP/ComicsCLIP
-CLIP&SigLIP/LinearProbe/out
-CLIP&SigLIP/LinearProbe/predictions
+singlepage_exp/visual_backbone/LinearProbe/out
+singlepage_exp/visual_backbone/LinearProbe/data
+singlepage_exp/visual_backbone/LinearProbe/predictions
 
-EncoderClassifier/out
-EncoderClassifier/data
-EncoderClassifier/checkpoints
-EncoderClassifier/models/best_model.pt
+singlepage_exp/visual_backbone/ZeroShot/data
+singlepage_exp/visual_backbone/ZeroShot/ComicsCLIP
+singlepage_exp/visual_backbone/ZeroShot/clip_predictions.npy
+singlepage_exp/visual_backbone/ZeroShot/siglip_predictions.npy
+
+CoSMo/out
+CoSMo/data
+CoSMo/checkpoints
+CoSMo/models/best_model.pt
 
 Statistics/data
 Statistics/models
+
+visualizations
+
+utils/clean_new_books.json
+multimodal-comic-pss/utils/corrupted.txt
+
+singlepage_exp/detection/magi_out
