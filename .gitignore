@@ -13,8 +13,10 @@ singlepage_exp/visual_backbone/LinearProbe/predictions
 
 singlepage_exp/visual_backbone/ZeroShot/data
 singlepage_exp/visual_backbone/ZeroShot/ComicsCLIP
-singlepage_exp/visual_backbone/ZeroShot/clip_predictions.npy
-singlepage_exp/visual_backbone/ZeroShot/siglip_predictions.npy
+
+single_page_exp/visual_backbone/ZeroShot/clip_predictions.npy
+single_page_exp/visual_backbone/ZeroShot/siglip_predictions.npy
+single_page_exp/visual_backbone/ZeroShot/ComicsCLIP
 
 CoSMo/out
 CoSMo/data
@@ -27,8 +29,11 @@ Statistics/models
 visualizations
 
 utils/clean_new_books.json
-multimodal-comic-pss/utils/corrupted.txt
+utils/corrupted.txt
 
 singlepage_exp/detection/magi_out
 
 data/DCM/magi
+data
+
+single_page_exp/detection/magi_out
