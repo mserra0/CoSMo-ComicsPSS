@@ -1,0 +1,4216 @@
+[
+  {
+    "id": 19022,
+    "dlid": "16277",
+    "hash_code": "5fd0b37c",
+    "title": "Adventures of Peter Wheat 21",
+    "subdb": "comics",
+    "split": "new",
+    "stories": [
+      {
+        "id": 143567,
+        "story_id": "",
+        "title": "The Adventures of Peater Wheat",
+        "page_start": 1,
+        "page_end": 15
+      }
+    ],
+    "textstories": [],
+    "advertisements": [],
+    "covers": [
+      {
+        "id": 196,
+        "title": "The Adventures of Peater Wheat",
+        "page_start": 0,
+        "page_end": 0
+      }
+    ]
+  },
+  {
+    "id": 18427,
+    "dlid": "7603",
+    "hash_code": "357a6fdf",
+    "title": "Beware 007 (1954.01)",
+    "subdb": "comics",
+    "split": "new",
+    "stories": [
+      {
+        "id": 136375,
+        "story_id": "7603_2",
+        "title": "The Life of Riley",
+        "page_start": 3,
+        "page_end": 8
+      },
+      {
+        "id": 136376,
+        "story_id": "7603_5",
+        "title": "Guest of the Ghouls",
+        "page_start": 13,
+        "page_end": 18
+      },
+      {
+        "id": 136377,
+        "story_id": "7603_6",
+        "title": "Heads of the Dead",
+        "page_start": 19,
+        "page_end": 24
+      },
+      {
+        "id": 136379,
+        "story_id": "7603_10",
+        "title": "Black Death",
+        "page_start": 29,
+        "page_end": 34
+      },
+      {
+        "id": 144423,
+        "story_id": "",
+        "title": "The Life of Riley continue",
+        "page_start": 10,
+        "page_end": 11
+      }
+    ],
+    "textstories": [
+      {
+        "id": 460,
+        "title": "The Devil Shares a Body",
+        "page_start": 26,
+        "page_end": 27
+      }
+    ],
+    "advertisements": [
+      {
+        "id": 1094,
+        "title": "",
+        "page_start": 2,
+        "page_end": 2
+      },
+      {
+        "id": 1095,
+        "title": "",
+        "page_start": 9,
+        "page_end": 9
+      },
+      {
+        "id": 1096,
+        "title": "",
+        "page_start": 12,
+        "page_end": 12
+      },
+      {
+        "id": 1097,
+        "title": "",
+        "page_start": 25,
+        "page_end": 25
+      },
+      {
+        "id": 1099,
+        "title": "",
+        "page_start": 28,
+        "page_end": 28
+      },
+      {
+        "id": 1100,
+        "title": "",
+        "page_start": 35,
+        "page_end": 35
+      }
+    ],
+    "covers": [
+      {
+        "id": 422,
+        "title": "Beware",
+        "page_start": 0,
+        "page_end": 0
+      }
+    ]
+  },
+  {
+    "id": 867,
+    "dlid": "5262",
+    "hash_code": "577ef115",
+    "title": "Apache Trail 004 (1958)",
+    "subdb": "comics",
+    "split": "new",
+    "stories": [
+      {
+        "id": 4538,
+        "story_id": "5262_1",
+        "title": "The Rifle and the Rival",
+        "page_start": 2,
+        "page_end": 2
+      },
+      {
+        "id": 4539,
+        "story_id": "5262_2",
+        "title": "The Mule Mombo",
+        "page_start": 11,
+        "page_end": 11
+      },
+      {
+        "id": 4541,
+        "story_id": "5262_4",
+        "title": "The Black Saddle",
+        "page_start": 17,
+        "page_end": 18
+      },
+      {
+        "id": 4542,
+        "story_id": "5262_5",
+        "title": "Cunning Versus Skill!",
+        "page_start": 29,
+        "page_end": 31
+      },
+      {
+        "id": 144313,
+        "story_id": "",
+        "title": "The Rifle and the Rival continue",
+        "page_start": 4,
+        "page_end": 6
+      },
+      {
+        "id": 144314,
+        "story_id": "",
+        "title": "The Rifle and the Rival continue",
+        "page_start": 8,
+        "page_end": 10
+      },
+      {
+        "id": 144315,
+        "story_id": "",
+        "title": "The Mule Mombo continue",
+        "page_start": 13,
+        "page_end": 15
+      },
+      {
+        "id": 144316,
+        "story_id": "",
+        "title": "The Black Saddle continue",
+        "page_start": 20,
+        "page_end": 25
+      },
+      {
+        "id": 144317,
+        "story_id": "",
+        "title": "The Black Saddle continue",
+        "page_start": 27,
+        "page_end": 27
+      },
+      {
+        "id": 144318,
+        "story_id": "",
+        "title": "Cunning Versus Skill! continue",
+        "page_start": 33,
+        "page_end": 33
+      }
+    ],
+    "textstories": [
+      {
+        "id": 352,
+        "title": "Fabulous Funeral",
+        "page_start": 12,
+        "page_end": 12
+      }
+    ],
+    "advertisements": [
+      {
+        "id": 827,
+        "title": "",
+        "page_start": 1,
+        "page_end": 1
+      },
+      {
+        "id": 828,
+        "title": "",
+        "page_start": 3,
+        "page_end": 3
+      },
+      {
+        "id": 829,
+        "title": "",
+        "page_start": 7,
+        "page_end": 7
+      },
+      {
+        "id": 830,
+        "title": "",
+        "page_start": 16,
+        "page_end": 16
+      },
+      {
+        "id": 831,
+        "title": "",
+        "page_start": 19,
+        "page_end": 19
+      },
+      {
+        "id": 832,
+        "title": "",
+        "page_start": 26,
+        "page_end": 26
+      },
+      {
+        "id": 833,
+        "title": "",
+        "page_start": 28,
+        "page_end": 28
+      },
+      {
+        "id": 834,
+        "title": "",
+        "page_start": 32,
+        "page_end": 32
+      },
+      {
+        "id": 835,
+        "title": "",
+        "page_start": 34,
+        "page_end": 35
+      }
+    ],
+    "covers": [
+      {
+        "id": 332,
+        "title": "Apache Trail",
+        "page_start": 0,
+        "page_end": 0
+      }
+    ]
+  },
+  {
+    "id": 9696,
+    "dlid": "7445",
+    "hash_code": "bd4c9ab7",
+    "title": "All Top Comics 007(a)",
+    "subdb": "comics",
+    "split": "new",
+    "stories": [
+      {
+        "id": 143800,
+        "story_id": "",
+        "title": "Roscot Bear",
+        "page_start": 1,
+        "page_end": 1
+      },
+      {
+        "id": 143801,
+        "story_id": "",
+        "title": "Cosmo Cat",
+        "page_start": 2,
+        "page_end": 7
+      },
+      {
+        "id": 143802,
+        "story_id": "",
+        "title": "FlashLyte",
+        "page_start": 8,
+        "page_end": 12
+      },
+      {
+        "id": 143803,
+        "story_id": "",
+        "title": "Roscoe Bear",
+        "page_start": 15,
+        "page_end": 15
+      },
+      {
+        "id": 143804,
+        "story_id": "",
+        "title": "Percy",
+        "page_start": 16,
+        "page_end": 21
+      },
+      {
+        "id": 143805,
+        "story_id": "",
+        "title": "Senor Tamale",
+        "page_start": 22,
+        "page_end": 26
+      },
+      {
+        "id": 143806,
+        "story_id": "",
+        "title": "Walter",
+        "page_start": 27,
+        "page_end": 32
+      },
+      {
+        "id": 143807,
+        "story_id": "",
+        "title": "Hedy Hippo",
+        "page_start": 33,
+        "page_end": 33
+      }
+    ],
+    "textstories": [
+      {
+        "id": 237,
+        "title": "Cosmo Cat and the desert rats",
+        "page_start": 13,
+        "page_end": 14
+      }
+    ],
+    "advertisements": [
+      {
+        "id": 644,
+        "title": "",
+        "page_start": 34,
+        "page_end": 35
+      }
+    ],
+    "covers": [
+      {
+        "id": 232,
+        "title": "All Top Comics",
+        "page_start": 0,
+        "page_end": 0
+      }
+    ]
+  },
+  {
+    "id": 147,
+    "dlid": "6523",
+    "hash_code": "94f6d7e0",
+    "title": "Baffling Mysteries 026 (inc)",
+    "subdb": "comics",
+    "split": "new",
+    "stories": [
+      {
+        "id": 275,
+        "story_id": "6523_1",
+        "title": "Prisoners in a Lost World",
+        "page_start": 2,
+        "page_end": 8
+      },
+      {
+        "id": 276,
+        "story_id": "6523_3",
+        "title": "Baffling Mysteries",
+        "page_start": 9,
+        "page_end": 9
+      },
+      {
+        "id": 277,
+        "story_id": "6523_4",
+        "title": "The Lorelei of Loon Lake",
+        "page_start": 10,
+        "page_end": 16
+      },
+      {
+        "id": 278,
+        "story_id": "6523_5",
+        "title": "Baffling Mysteries",
+        "page_start": 17,
+        "page_end": 17
+      },
+      {
+        "id": 279,
+        "story_id": "6523_6",
+        "title": "The Phantom Model",
+        "page_start": 18,
+        "page_end": 24
+      },
+      {
+        "id": 281,
+        "story_id": "6523_8",
+        "title": "6 Furlongs to Yesterday",
+        "page_start": 27,
+        "page_end": 33
+      }
+    ],
+    "textstories": [
+      {
+        "id": 435,
+        "title": "The Mummy's Curse",
+        "page_start": 25,
+        "page_end": 26
+      }
+    ],
+    "advertisements": [],
+    "covers": [
+      {
+        "id": 397,
+        "title": "Baffling mysteries",
+        "page_start": 0,
+        "page_end": 0
+      }
+    ]
+  },
+  {
+    "id": 7056,
+    "dlid": "265",
+    "hash_code": "060ad924",
+    "title": "America's Greatest Comics 005",
+    "subdb": "comics",
+    "split": "new",
+    "stories": [
+      {
+        "id": 144252,
+        "story_id": "",
+        "title": "Captain Marvel",
+        "page_start": 3,
+        "page_end": 22
+      },
+      {
+        "id": 144253,
+        "story_id": "",
+        "title": "Spy Smasher",
+        "page_start": 24,
+        "page_end": 35
+      },
+      {
+        "id": 144254,
+        "story_id": "",
+        "title": "Bulletman",
+        "page_start": 36,
+        "page_end": 53
+      },
+      {
+        "id": 144255,
+        "story_id": "",
+        "title": "Minute Man",
+        "page_start": 57,
+        "page_end": 68
+      },
+      {
+        "id": 144256,
+        "story_id": "",
+        "title": "Whipper Snappers",
+        "page_start": 69,
+        "page_end": 69
+      },
+      {
+        "id": 144257,
+        "story_id": "",
+        "title": "Mr.Scarlet",
+        "page_start": 70,
+        "page_end": 81
+      },
+      {
+        "id": 144258,
+        "story_id": "",
+        "title": "Commando Yank",
+        "page_start": 83,
+        "page_end": 97
+      }
+    ],
+    "textstories": [
+      {
+        "id": 319,
+        "title": "Sea Hunters",
+        "page_start": 55,
+        "page_end": 56
+      }
+    ],
+    "advertisements": [
+      {
+        "id": 758,
+        "title": "",
+        "page_start": 1,
+        "page_end": 2
+      },
+      {
+        "id": 759,
+        "title": "",
+        "page_start": 23,
+        "page_end": 23
+      },
+      {
+        "id": 760,
+        "title": "",
+        "page_start": 54,
+        "page_end": 54
+      },
+      {
+        "id": 761,
+        "title": "",
+        "page_start": 82,
+        "page_end": 82
+      },
+      {
+        "id": 762,
+        "title": "",
+        "page_start": 98,
+        "page_end": 100
+      }
+    ],
+    "covers": [
+      {
+        "id": 311,
+        "title": "America's Gratest Comics",
+        "page_start": 0,
+        "page_end": 0
+      }
+    ]
+  },
+  {
+    "id": 3702,
+    "dlid": "11299",
+    "hash_code": "0336dcba",
+    "title": "Amazing Mystery Funnies v1 003 (photocopy) -JVJ",
+    "subdb": "comics",
+    "split": "new",
+    "stories": [
+      {
+        "id": 144090,
+        "story_id": "",
+        "title": "Skyrocket Steel",
+        "page_start": 3,
+        "page_end": 6
+      },
+      {
+        "id": 144091,
+        "story_id": "",
+        "title": "Adventures of Newsreel Camaraman",
+        "page_start": 7,
+        "page_end": 13
+      },
+      {
+        "id": 144092,
+        "story_id": "",
+        "title": "The Lama of Kadak",
+        "page_start": 14,
+        "page_end": 20
+      },
+      {
+        "id": 144093,
+        "story_id": "",
+        "title": "Dirk The Demon",
+        "page_start": 21,
+        "page_end": 23
+      },
+      {
+        "id": 144095,
+        "story_id": "",
+        "title": "2038",
+        "page_start": 26,
+        "page_end": 27
+      },
+      {
+        "id": 144096,
+        "story_id": "",
+        "title": "Tracks in the snow",
+        "page_start": 30,
+        "page_end": 36
+      },
+      {
+        "id": 144097,
+        "story_id": "",
+        "title": "Fisherman's Luck",
+        "page_start": 37,
+        "page_end": 43
+      },
+      {
+        "id": 144098,
+        "story_id": "",
+        "title": "Man Hunt",
+        "page_start": 44,
+        "page_end": 50
+      }
+    ],
+    "textstories": [
+      {
+        "id": 274,
+        "title": "How Terry Kilgison Flew around the World in a day",
+        "page_start": 24,
+        "page_end": 25
+      },
+      {
+        "id": 275,
+        "title": "How Terry Kilgison Flew around the World in a day. (Continue)",
+        "page_start": 28,
+        "page_end": 29
+      }
+    ],
+    "advertisements": [
+      {
+        "id": 701,
+        "title": "",
+        "page_start": 2,
+        "page_end": 2
+      },
+      {
+        "id": 702,
+        "title": "",
+        "page_start": 51,
+        "page_end": 52
+      }
+    ],
+    "covers": [
+      {
+        "id": 271,
+        "title": "Amazing Mystery Funnies",
+        "page_start": 0,
+        "page_end": 1
+      }
+    ]
+  },
+  {
+    "id": 10067,
+    "dlid": "11886",
+    "hash_code": "d1a21da7",
+    "title": "Phantom Lady 022 (c2c)",
+    "subdb": "comics",
+    "split": "val",
+    "stories": [
+      {
+        "id": 78536,
+        "story_id": "11886_1",
+        "title": "Phantom Lady: The Case of the Robbing Robot",
+        "page_start": 1,
+        "page_end": 9
+      },
+      {
+        "id": 78537,
+        "story_id": "11886_2",
+        "title": "Phantom Lady: Olympic Saboteurs",
+        "page_start": 10,
+        "page_end": 19
+      },
+      {
+        "id": 78539,
+        "story_id": "11886_4",
+        "title": "Phantom Lady: The Crime of Roger Caseman",
+        "page_start": 22,
+        "page_end": 26
+      },
+      {
+        "id": 78540,
+        "story_id": "11886_5",
+        "title": "Joe Noon -- Killer",
+        "page_start": 27,
+        "page_end": 32
+      }
+    ],
+    "textstories": [
+      {
+        "id": 23,
+        "title": "The Roundabout Justice",
+        "page_start": 20,
+        "page_end": 21
+      }
+    ],
+    "advertisements": [
+      {
+        "id": 44,
+        "title": "Captain Marvel Wrist Watch",
+        "page_start": 33,
+        "page_end": 33
+      },
+      {
+        "id": 45,
+        "title": "Zipper Billfold / Ball Point Pen / Pocket Flashlight Pencil /  Plastic Key Holder",
+        "page_start": 34,
+        "page_end": 34
+      },
+      {
+        "id": 46,
+        "title": "Lose Weight With Spot Reducer",
+        "page_start": 35,
+        "page_end": 35
+      }
+    ],
+    "covers": [
+      {
+        "id": 15,
+        "title": "Front",
+        "page_start": 0,
+        "page_end": 0
+      }
+    ]
+  },
+  {
+    "id": 17423,
+    "dlid": "21591",
+    "hash_code": "1fffeb21",
+    "title": "All-Famous Crime 08 (first issue)",
+    "subdb": "comics",
+    "split": "new",
+    "stories": [
+      {
+        "id": 143891,
+        "story_id": "",
+        "title": "Trick a killer",
+        "page_start": 2,
+        "page_end": 8
+      },
+      {
+        "id": 143892,
+        "story_id": "",
+        "title": "The Torch Murder",
+        "page_start": 10,
+        "page_end": 13
+      },
+      {
+        "id": 143893,
+        "story_id": "",
+        "title": "Carolina Jailbrake",
+        "page_start": 14,
+        "page_end": 23
+      },
+      {
+        "id": 143894,
+        "story_id": "",
+        "title": "The case of the Panicky Slayer",
+        "page_start": 25,
+        "page_end": 31
+      }
+    ],
+    "textstories": [
+      {
+        "id": 250,
+        "title": "The Chump",
+        "page_start": 9,
+        "page_end": 9
+      },
+      {
+        "id": 251,
+        "title": "Fruites of Crime",
+        "page_start": 24,
+        "page_end": 24
+      }
+    ],
+    "advertisements": [
+      {
+        "id": 667,
+        "title": "",
+        "page_start": 1,
+        "page_end": 1
+      },
+      {
+        "id": 668,
+        "title": "",
+        "page_start": 32,
+        "page_end": 35
+      }
+    ],
+    "covers": [
+      {
+        "id": 246,
+        "title": "All Famous Crime",
+        "page_start": 0,
+        "page_end": 0
+      }
+    ]
+  },
+  {
+    "id": 3875,
+    "dlid": "11120",
+    "hash_code": "555d6702",
+    "title": "Atom The Cat 013 c2c",
+    "subdb": "comics",
+    "split": "new",
+    "stories": [
+      {
+        "id": 27816,
+        "story_id": "11120_1",
+        "title": "Muffo the Magician",
+        "page_start": 2,
+        "page_end": 4
+      },
+      {
+        "id": 27817,
+        "story_id": "11120_2",
+        "title": "Cuckoo Cat's Song",
+        "page_start": 11,
+        "page_end": 11
+      },
+      {
+        "id": 27818,
+        "story_id": "11120_3",
+        "title": "The Indians are Coming!",
+        "page_start": 12,
+        "page_end": 13
+      },
+      {
+        "id": 27819,
+        "story_id": "11120_4",
+        "title": "My Tree",
+        "page_start": 20,
+        "page_end": 20
+      },
+      {
+        "id": 27820,
+        "story_id": "11120_5",
+        "title": "The Hard Way",
+        "page_start": 26,
+        "page_end": 27
+      },
+      {
+        "id": 27821,
+        "story_id": "11120_6",
+        "title": "Atom the Cat and his 'Helpers'",
+        "page_start": 28,
+        "page_end": 29
+      },
+      {
+        "id": 144319,
+        "story_id": "",
+        "title": "Muffo the Magician continue",
+        "page_start": 6,
+        "page_end": 10
+      },
+      {
+        "id": 144320,
+        "story_id": "",
+        "title": "The Indians are Coming! continue",
+        "page_start": 15,
+        "page_end": 19
+      },
+      {
+        "id": 144322,
+        "story_id": "",
+        "title": "My Tree continue",
+        "page_start": 22,
+        "page_end": 25
+      },
+      {
+        "id": 144323,
+        "story_id": "",
+        "title": "Atom the Cat and his 'Helpers' continue",
+        "page_start": 31,
+        "page_end": 32
+      }
+    ],
+    "textstories": [],
+    "advertisements": [
+      {
+        "id": 838,
+        "title": "",
+        "page_start": 1,
+        "page_end": 1
+      },
+      {
+        "id": 839,
+        "title": "",
+        "page_start": 5,
+        "page_end": 5
+      },
+      {
+        "id": 840,
+        "title": "",
+        "page_start": 14,
+        "page_end": 14
+      },
+      {
+        "id": 842,
+        "title": "",
+        "page_start": 21,
+        "page_end": 21
+      },
+      {
+        "id": 843,
+        "title": "",
+        "page_start": 30,
+        "page_end": 30
+      },
+      {
+        "id": 844,
+        "title": "",
+        "page_start": 33,
+        "page_end": 35
+      }
+    ],
+    "covers": [
+      {
+        "id": 337,
+        "title": "Atom The Cat",
+        "page_start": 0,
+        "page_end": 0
+      }
+    ]
+  },
+  {
+    "id": 5741,
+    "dlid": "17072",
+    "hash_code": "0c74b7f7",
+    "title": "Big Shot Comics 039",
+    "subdb": "comics",
+    "split": "new",
+    "stories": [
+      {
+        "id": 41478,
+        "story_id": "17072_1",
+        "title": "Sparky's Power Losses",
+        "page_start": 2,
+        "page_end": 7
+      },
+      {
+        "id": 41479,
+        "story_id": "17072_2",
+        "title": "The Return To Camp Dix",
+        "page_start": 8,
+        "page_end": 14
+      },
+      {
+        "id": 41480,
+        "story_id": "17072_3",
+        "title": "The Hydraulic Boomerang, Part 1",
+        "page_start": 15,
+        "page_end": 18
+      },
+      {
+        "id": 41481,
+        "story_id": "17072_4",
+        "title": "The Circus Act",
+        "page_start": 19,
+        "page_end": 24
+      },
+      {
+        "id": 41482,
+        "story_id": "17072_5",
+        "title": "The Rescue of Captain Yank",
+        "page_start": 25,
+        "page_end": 28
+      },
+      {
+        "id": 41483,
+        "story_id": "17072_6",
+        "title": "The Redwood Forest, Part 1",
+        "page_start": 29,
+        "page_end": 35
+      },
+      {
+        "id": 41484,
+        "story_id": "17072_7",
+        "title": "Skyman",
+        "page_start": 36,
+        "page_end": 42
+      },
+      {
+        "id": 41486,
+        "story_id": "17072_9",
+        "title": "The Dilemma of Major Koenig",
+        "page_start": 45,
+        "page_end": 49
+      },
+      {
+        "id": 41487,
+        "story_id": "17072_10",
+        "title": "The Munitions Works Raid",
+        "page_start": 50,
+        "page_end": 57
+      }
+    ],
+    "textstories": [
+      {
+        "id": 493,
+        "title": "Adolf, You're Slipping",
+        "page_start": 43,
+        "page_end": 44
+      }
+    ],
+    "advertisements": [
+      {
+        "id": 1179,
+        "title": "",
+        "page_start": 1,
+        "page_end": 1
+      },
+      {
+        "id": 1180,
+        "title": "",
+        "page_start": 58,
+        "page_end": 59
+      }
+    ],
+    "covers": [
+      {
+        "id": 453,
+        "title": "Big Shot Comics",
+        "page_start": 0,
+        "page_end": 0
+      }
+    ]
+  },
+  {
+    "id": 17715,
+    "dlid": "5997",
+    "hash_code": "06138bc5",
+    "title": "Authentic Police Cases 019",
+    "subdb": "comics",
+    "split": "new",
+    "stories": [
+      {
+        "id": 132294,
+        "story_id": "5997_2",
+        "title": "I Turned to Crime",
+        "page_start": 2,
+        "page_end": 9
+      },
+      {
+        "id": 132295,
+        "story_id": "5997_3",
+        "title": "Murder Knocks at Cell No. 5",
+        "page_start": 10,
+        "page_end": 15
+      },
+      {
+        "id": 132296,
+        "story_id": "5997_4",
+        "title": "Broadway Betty",
+        "page_start": 16,
+        "page_end": 21
+      },
+      {
+        "id": 132297,
+        "story_id": "5997_5",
+        "title": "Gangland versus Willie Reuther",
+        "page_start": 22,
+        "page_end": 27
+      },
+      {
+        "id": 132298,
+        "story_id": "5997_6",
+        "title": "Smuggling Human Cargo",
+        "page_start": 28,
+        "page_end": 33
+      }
+    ],
+    "textstories": [
+      {
+        "id": 397,
+        "title": "Murder Picks a Loser",
+        "page_start": 1,
+        "page_end": 1
+      },
+      {
+        "id": 398,
+        "title": "Smuggling Human Cargo",
+        "page_start": 34,
+        "page_end": 34
+      }
+    ],
+    "advertisements": [
+      {
+        "id": 910,
+        "title": "",
+        "page_start": 35,
+        "page_end": 35
+      }
+    ],
+    "covers": [
+      {
+        "id": 362,
+        "title": "Police Cases",
+        "page_start": 0,
+        "page_end": 0
+      }
+    ]
+  },
+  {
+    "id": 11816,
+    "dlid": "19690",
+    "hash_code": "097e26b2",
+    "title": "Victory Comics 003 (paper)",
+    "subdb": "comics",
+    "split": "dev",
+    "stories": [
+      {
+        "id": 91276,
+        "story_id": "19690_1",
+        "title": "The Blitzkrieg of Damora",
+        "page_start": 2,
+        "page_end": 13
+      },
+      {
+        "id": 91277,
+        "story_id": "19690_2",
+        "title": "The Framing of the Firebrand",
+        "page_start": 14,
+        "page_end": 21
+      },
+      {
+        "id": 91278,
+        "story_id": "19690_3",
+        "title": "Ordeal by Fire",
+        "page_start": 22,
+        "page_end": 28
+      },
+      {
+        "id": 91279,
+        "story_id": "19690_4",
+        "title": "Homicide Hank",
+        "page_start": 29,
+        "page_end": 31
+      },
+      {
+        "id": 91280,
+        "story_id": "19690_5",
+        "title": "The Liaison Car",
+        "page_start": 32,
+        "page_end": 32
+      },
+      {
+        "id": 91282,
+        "story_id": "19690_7",
+        "title": "Forewarned Is Forearmed",
+        "page_start": 35,
+        "page_end": 41
+      },
+      {
+        "id": 91283,
+        "story_id": "19690_8",
+        "title": "Raider's Doom",
+        "page_start": 42,
+        "page_end": 48
+      },
+      {
+        "id": 91284,
+        "story_id": "19690_9",
+        "title": "Lt. Joel T. Boone",
+        "page_start": 49,
+        "page_end": 49
+      },
+      {
+        "id": 91285,
+        "story_id": "19690_10",
+        "title": "Down in the Flood",
+        "page_start": 50,
+        "page_end": 55
+      },
+      {
+        "id": 91286,
+        "story_id": "19690_11",
+        "title": "The Mystery of the Green-Eyed Man",
+        "page_start": 56,
+        "page_end": 65
+      }
+    ],
+    "textstories": [
+      {
+        "id": 133,
+        "title": "Victory Parade",
+        "page_start": 33,
+        "page_end": 34
+      }
+    ],
+    "advertisements": [
+      {
+        "id": 429,
+        "title": "Focusing Power Telescope / Scientific Wonders Of The World",
+        "page_start": 66,
+        "page_end": 66
+      },
+      {
+        "id": 430,
+        "title": "Magic Multiplier / Encyclopedia",
+        "page_start": 67,
+        "page_end": 67
+      }
+    ],
+    "covers": [
+      {
+        "id": 144,
+        "title": "Front",
+        "page_start": 0,
+        "page_end": 0
+      }
+    ]
+  },
+  {
+    "id": 148,
+    "dlid": "16327",
+    "hash_code": "72007983",
+    "title": "Banner Comics 003 (66 of 68pgs)",
+    "subdb": "comics",
+    "split": "new",
+    "stories": [
+      {
+        "id": 282,
+        "story_id": "16327_1",
+        "title": "Captain Courageous, Mighty Warrior!!!",
+        "page_start": 2,
+        "page_end": 17
+      },
+      {
+        "id": 283,
+        "story_id": "16327_2",
+        "title": "The Lone Warrior",
+        "page_start": 18,
+        "page_end": 40
+      },
+      {
+        "id": 285,
+        "story_id": "16327_4",
+        "title": "Kay McKay, Air Hostess",
+        "page_start": 41,
+        "page_end": 49
+      },
+      {
+        "id": 286,
+        "story_id": "16327_5",
+        "title": "American Trail Blazers",
+        "page_start": 50,
+        "page_end": 50
+      },
+      {
+        "id": 288,
+        "story_id": "16327_7",
+        "title": "Paul Revere, Jr.",
+        "page_start": 53,
+        "page_end": 62
+      },
+      {
+        "id": 144402,
+        "story_id": "",
+        "title": "American Trail Blazers",
+        "page_start": 63,
+        "page_end": 63
+      }
+    ],
+    "textstories": [
+      {
+        "id": 436,
+        "title": "Mastermind Payoff",
+        "page_start": 51,
+        "page_end": 52
+      }
+    ],
+    "advertisements": [
+      {
+        "id": 997,
+        "title": "",
+        "page_start": 1,
+        "page_end": 1
+      },
+      {
+        "id": 998,
+        "title": "",
+        "page_start": 64,
+        "page_end": 65
+      }
+    ],
+    "covers": [
+      {
+        "id": 398,
+        "title": "Banner Comics",
+        "page_start": 0,
+        "page_end": 0
+      }
+    ]
+  },
+  {
+    "id": 2504,
+    "dlid": "7157",
+    "hash_code": "ac627ab1",
+    "title": "Adventures Into Darkness 011",
+    "subdb": "comics",
+    "split": "new",
+    "stories": [
+      {
+        "id": 15418,
+        "story_id": "7157_2",
+        "title": "Rider in the Storm",
+        "page_start": 9,
+        "page_end": 9
+      },
+      {
+        "id": 143469,
+        "story_id": "",
+        "title": "Mission from the Grave",
+        "page_start": 2,
+        "page_end": 8
+      },
+      {
+        "id": 143471,
+        "story_id": "",
+        "title": "The Finger of Guilt",
+        "page_start": 11,
+        "page_end": 12
+      },
+      {
+        "id": 143472,
+        "story_id": "",
+        "title": "Trophies of Doom",
+        "page_start": 13,
+        "page_end": 18
+      },
+      {
+        "id": 143473,
+        "story_id": "",
+        "title": "Bride of Death",
+        "page_start": 21,
+        "page_end": 23
+      },
+      {
+        "id": 143474,
+        "story_id": "",
+        "title": "The Bread of Madness",
+        "page_start": 24,
+        "page_end": 31
+      }
+    ],
+    "textstories": [
+      {
+        "id": 162,
+        "title": "Call of the WereWolf",
+        "page_start": 19,
+        "page_end": 20
+      }
+    ],
+    "advertisements": [
+      {
+        "id": 515,
+        "title": "",
+        "page_start": 1,
+        "page_end": 1
+      },
+      {
+        "id": 517,
+        "title": "",
+        "page_start": 10,
+        "page_end": 10
+      },
+      {
+        "id": 519,
+        "title": "",
+        "page_start": 32,
+        "page_end": 35
+      }
+    ],
+    "covers": [
+      {
+        "id": 178,
+        "title": "Adventures into Darkness",
+        "page_start": 0,
+        "page_end": 0
+      }
+    ]
+  },
+  {
+    "id": 2526,
+    "dlid": "21112",
+    "hash_code": "3d324c28",
+    "title": "America's Best Comics 015 (diff ver)-c2c",
+    "subdb": "comics",
+    "split": "new",
+    "stories": [
+      {
+        "id": 144183,
+        "story_id": "",
+        "title": "Doc Strange",
+        "page_start": 2,
+        "page_end": 11
+      },
+      {
+        "id": 144184,
+        "story_id": "",
+        "title": "The Black Terror",
+        "page_start": 13,
+        "page_end": 20
+      },
+      {
+        "id": 144185,
+        "story_id": "",
+        "title": "The Fighting Yank",
+        "page_start": 22,
+        "page_end": 33
+      }
+    ],
+    "textstories": [
+      {
+        "id": 295,
+        "title": "Through The Storm",
+        "page_start": 12,
+        "page_end": 12
+      },
+      {
+        "id": 296,
+        "title": "Herbie Helps The Police",
+        "page_start": 21,
+        "page_end": 21
+      }
+    ],
+    "advertisements": [
+      {
+        "id": 727,
+        "title": "",
+        "page_start": 1,
+        "page_end": 1
+      },
+      {
+        "id": 728,
+        "title": "",
+        "page_start": 34,
+        "page_end": 35
+      }
+    ],
+    "covers": [
+      {
+        "id": 299,
+        "title": "America's Best Comics",
+        "page_start": 0,
+        "page_end": 0
+      }
+    ]
+  },
+  {
+    "id": 17472,
+    "dlid": "18856",
+    "hash_code": "67c6a1e7",
+    "title": "4Most Boys Comics 038 (1950)-inc",
+    "subdb": "comics",
+    "split": "new",
+    "stories": [
+      {
+        "id": 131066,
+        "story_id": "18856_1",
+        "title": "Visitor's Day At Daunton",
+        "page_start": 1,
+        "page_end": 10
+      },
+      {
+        "id": 131067,
+        "story_id": "18856_2",
+        "title": "Tarzan Johnny Weismuller",
+        "page_start": 12,
+        "page_end": 15
+      },
+      {
+        "id": 131069,
+        "story_id": "18856_4",
+        "title": "Edison Bell",
+        "page_start": 18,
+        "page_end": 22
+      },
+      {
+        "id": 131070,
+        "story_id": "18856_5",
+        "title": "Jim Braddock",
+        "page_start": 23,
+        "page_end": 26
+      },
+      {
+        "id": 131071,
+        "story_id": "18856_6",
+        "title": "White Rider",
+        "page_start": 27,
+        "page_end": 31
+      }
+    ],
+    "textstories": [
+      {
+        "id": 152,
+        "title": "A Case of Poison Ivy",
+        "page_start": 16,
+        "page_end": 17
+      }
+    ],
+    "advertisements": [
+      {
+        "id": 466,
+        "title": "Dubble Bumbble",
+        "page_start": 11,
+        "page_end": 11
+      },
+      {
+        "id": 473,
+        "title": "Pocket Lighteer",
+        "page_start": 32,
+        "page_end": 32
+      }
+    ],
+    "covers": [
+      {
+        "id": 160,
+        "title": "4 Most Boys",
+        "page_start": 0,
+        "page_end": 0
+      }
+    ]
+  },
+  {
+    "id": 9714,
+    "dlid": "12536",
+    "hash_code": "82cec960",
+    "title": "Big 3 Comics 004 (paper)-c2c",
+    "subdb": "comics",
+    "split": "new",
+    "stories": [
+      {
+        "id": 76350,
+        "story_id": "12536_1",
+        "title": "The Wicked Work of the Web",
+        "page_start": 2,
+        "page_end": 19
+      },
+      {
+        "id": 76351,
+        "story_id": "12536_2",
+        "title": "The Terror Campaign",
+        "page_start": 20,
+        "page_end": 32
+      },
+      {
+        "id": 76353,
+        "story_id": "12536_4",
+        "title": "Samson and Davis",
+        "page_start": 37,
+        "page_end": 49
+      },
+      {
+        "id": 76354,
+        "story_id": "12536_5",
+        "title": "The Warning of Baron Siva",
+        "page_start": 50,
+        "page_end": 63
+      }
+    ],
+    "textstories": [
+      {
+        "id": 481,
+        "title": "Bridge in Danger",
+        "page_start": 35,
+        "page_end": 36
+      }
+    ],
+    "advertisements": [
+      {
+        "id": 1153,
+        "title": "",
+        "page_start": 1,
+        "page_end": 1
+      },
+      {
+        "id": 1154,
+        "title": "",
+        "page_start": 33,
+        "page_end": 34
+      },
+      {
+        "id": 1155,
+        "title": "",
+        "page_start": 64,
+        "page_end": 63
+      }
+    ],
+    "covers": [
+      {
+        "id": 442,
+        "title": "Big 3",
+        "page_start": 0,
+        "page_end": 0
+      }
+    ]
+  },
+  {
+    "id": 17385,
+    "dlid": "17038",
+    "hash_code": "705f2172",
+    "title": "Animal Adventures 003",
+    "subdb": "comics",
+    "split": "new",
+    "stories": [
+      {
+        "id": 130607,
+        "story_id": "17038_2",
+        "title": "Ghost of a Chance",
+        "page_start": 2,
+        "page_end": 7
+      },
+      {
+        "id": 130608,
+        "story_id": "17038_3",
+        "title": "The Doctor's Advice!",
+        "page_start": 8,
+        "page_end": 13
+      },
+      {
+        "id": 130610,
+        "story_id": "17038_6",
+        "title": "The Dragon Caper",
+        "page_start": 17,
+        "page_end": 21
+      },
+      {
+        "id": 130611,
+        "story_id": "17038_8",
+        "title": "Whale of a Mistake!",
+        "page_start": 23,
+        "page_end": 28
+      },
+      {
+        "id": 130612,
+        "story_id": "17038_9",
+        "title": "Living--?",
+        "page_start": 29,
+        "page_end": 30
+      }
+    ],
+    "textstories": [
+      {
+        "id": 340,
+        "title": "Fish for the Seals",
+        "page_start": 15,
+        "page_end": 16
+      }
+    ],
+    "advertisements": [
+      {
+        "id": 800,
+        "title": "",
+        "page_start": 1,
+        "page_end": 1
+      },
+      {
+        "id": 801,
+        "title": "",
+        "page_start": 14,
+        "page_end": 14
+      },
+      {
+        "id": 802,
+        "title": "",
+        "page_start": 22,
+        "page_end": 22
+      },
+      {
+        "id": 803,
+        "title": "Am I brave?",
+        "page_start": 31,
+        "page_end": 31
+      },
+      {
+        "id": 804,
+        "title": "",
+        "page_start": 32,
+        "page_end": 34
+      }
+    ],
+    "covers": [
+      {
+        "id": 323,
+        "title": "Animal Adventures",
+        "page_start": 0,
+        "page_end": 0
+      }
+    ]
+  },
+  {
+    "id": 14647,
+    "dlid": "22714",
+    "hash_code": "84c2d486",
+    "title": "Babe, Darling of the Hills 008 -c2c",
+    "subdb": "comics",
+    "split": "new",
+    "stories": [
+      {
+        "id": 111404,
+        "story_id": "22714_1",
+        "title": "Hideout!",
+        "page_start": 2,
+        "page_end": 16
+      },
+      {
+        "id": 111405,
+        "story_id": "22714_2",
+        "title": "The Amazing LMPWDTTMBP",
+        "page_start": 17,
+        "page_end": 24
+      },
+      {
+        "id": 111406,
+        "story_id": "22714_3",
+        "title": "Doc Smith",
+        "page_start": 25,
+        "page_end": 26
+      },
+      {
+        "id": 111408,
+        "story_id": "22714_5",
+        "title": "Goofy Gus",
+        "page_start": 29,
+        "page_end": 31
+      },
+      {
+        "id": 111409,
+        "story_id": "22714_7",
+        "title": "The Mysterious Case of Mystery Mountain!",
+        "page_start": 33,
+        "page_end": 47
+      }
+    ],
+    "textstories": [
+      {
+        "id": 421,
+        "title": "He Got Her Back",
+        "page_start": 27,
+        "page_end": 28
+      }
+    ],
+    "advertisements": [
+      {
+        "id": 960,
+        "title": "",
+        "page_start": 1,
+        "page_end": 1
+      },
+      {
+        "id": 961,
+        "title": "",
+        "page_start": 32,
+        "page_end": 32
+      },
+      {
+        "id": 962,
+        "title": "",
+        "page_start": 48,
+        "page_end": 51
+      }
+    ],
+    "covers": [
+      {
+        "id": 379,
+        "title": "Babe, Darling of the hills",
+        "page_start": 0,
+        "page_end": 0
+      }
+    ]
+  },
+  {
+    "id": 5710,
+    "dlid": "21737",
+    "hash_code": "e7b24b11",
+    "title": "Big Shot Comics 010 (paper)",
+    "subdb": "comics",
+    "split": "new",
+    "stories": [
+      {
+        "id": 41118,
+        "story_id": "21737_1",
+        "title": "",
+        "page_start": 2,
+        "page_end": 12
+      },
+      {
+        "id": 41119,
+        "story_id": "21737_2",
+        "title": "The Cosmic Ray Weapon",
+        "page_start": 13,
+        "page_end": 14
+      },
+      {
+        "id": 41120,
+        "story_id": "21737_3",
+        "title": "Mike the Mascot",
+        "page_start": 15,
+        "page_end": 20
+      },
+      {
+        "id": 41121,
+        "story_id": "21737_4",
+        "title": "The Breadloaf Bomber Plans",
+        "page_start": 21,
+        "page_end": 26
+      },
+      {
+        "id": 41122,
+        "story_id": "21737_5",
+        "title": "The Day Before the Big Fight.",
+        "page_start": 27,
+        "page_end": 32
+      },
+      {
+        "id": 41123,
+        "story_id": "21737_6",
+        "title": "The Terch Kidnapping Case",
+        "page_start": 33,
+        "page_end": 33
+      },
+      {
+        "id": 41125,
+        "story_id": "21737_9",
+        "title": "The Bungle Family",
+        "page_start": 35,
+        "page_end": 35
+      },
+      {
+        "id": 41126,
+        "story_id": "21737_10",
+        "title": "The Macaw Mystery, Part 2",
+        "page_start": 36,
+        "page_end": 40
+      },
+      {
+        "id": 41127,
+        "story_id": "21737_11",
+        "title": "Film Facts",
+        "page_start": 41,
+        "page_end": 41
+      },
+      {
+        "id": 41128,
+        "story_id": "21737_12",
+        "title": "Potts the Butler",
+        "page_start": 42,
+        "page_end": 42
+      },
+      {
+        "id": 41129,
+        "story_id": "21737_13",
+        "title": "Land of the Blue Glass Tower",
+        "page_start": 43,
+        "page_end": 48
+      },
+      {
+        "id": 41131,
+        "story_id": "21737_15",
+        "title": "The Troglodytes of Matto Grosso",
+        "page_start": 51,
+        "page_end": 56
+      },
+      {
+        "id": 41132,
+        "story_id": "21737_16",
+        "title": "Dixie Dugan",
+        "page_start": 57,
+        "page_end": 57
+      },
+      {
+        "id": 41133,
+        "story_id": "21737_17",
+        "title": "Facts from Here 'n' There",
+        "page_start": 58,
+        "page_end": 58
+      },
+      {
+        "id": 41134,
+        "story_id": "21737_18",
+        "title": "The Dude Ranch Kidnapping",
+        "page_start": 59,
+        "page_end": 64
+      },
+      {
+        "id": 41135,
+        "story_id": "21737_19",
+        "title": "Mortimer the Monk",
+        "page_start": 65,
+        "page_end": 65
+      }
+    ],
+    "textstories": [
+      {
+        "id": 486,
+        "title": "Marvelo's Railroad Adventure!",
+        "page_start": 49,
+        "page_end": 50
+      }
+    ],
+    "advertisements": [
+      {
+        "id": 1166,
+        "title": "",
+        "page_start": 1,
+        "page_end": 1
+      },
+      {
+        "id": 1167,
+        "title": "",
+        "page_start": 34,
+        "page_end": 34
+      },
+      {
+        "id": 1168,
+        "title": "",
+        "page_start": 66,
+        "page_end": 67
+      }
+    ],
+    "covers": [
+      {
+        "id": 446,
+        "title": "Big Shot Comics",
+        "page_start": 0,
+        "page_end": 0
+      }
+    ]
+  },
+  {
+    "id": 18257,
+    "dlid": "19381",
+    "hash_code": "f8c1f23d",
+    "title": "Billy The Kid 020",
+    "subdb": "comics",
+    "split": "new",
+    "stories": [
+      {
+        "id": 135550,
+        "story_id": "19381_1",
+        "title": "The House in the Flood",
+        "page_start": 3,
+        "page_end": 13
+      },
+      {
+        "id": 135551,
+        "story_id": "19381_2",
+        "title": "The Haunted Cavern",
+        "page_start": 14,
+        "page_end": 16
+      },
+      {
+        "id": 135553,
+        "story_id": "19381_4",
+        "title": "Warpath!",
+        "page_start": 25,
+        "page_end": 30
+      },
+      {
+        "id": 135554,
+        "story_id": "19381_5",
+        "title": "Lost Gold",
+        "page_start": 31,
+        "page_end": 32
+      },
+      {
+        "id": 144469,
+        "story_id": "",
+        "title": "The Haunted Cavern continue",
+        "page_start": 19,
+        "page_end": 22
+      }
+    ],
+    "textstories": [
+      {
+        "id": 516,
+        "title": "Somebody Gets Caught",
+        "page_start": 23,
+        "page_end": 24
+      }
+    ],
+    "advertisements": [
+      {
+        "id": 1229,
+        "title": "",
+        "page_start": 1,
+        "page_end": 1
+      },
+      {
+        "id": 1230,
+        "title": "",
+        "page_start": 17,
+        "page_end": 17
+      },
+      {
+        "id": 1231,
+        "title": "",
+        "page_start": 33,
+        "page_end": 35
+      }
+    ],
+    "covers": [
+      {
+        "id": 471,
+        "title": "Billy the Kid",
+        "page_start": 0,
+        "page_end": 0
+      }
+    ]
+  },
+  {
+    "id": 2542,
+    "dlid": "1608",
+    "hash_code": "b1d10e7b",
+    "title": "America's Best Comics 030",
+    "subdb": "comics",
+    "split": "new",
+    "stories": [
+      {
+        "id": 144220,
+        "story_id": "",
+        "title": "The Black Terror",
+        "page_start": 2,
+        "page_end": 10
+      },
+      {
+        "id": 144221,
+        "story_id": "",
+        "title": "Miss Masque",
+        "page_start": 11,
+        "page_end": 19
+      },
+      {
+        "id": 144222,
+        "story_id": "",
+        "title": "Bart Bradley",
+        "page_start": 23,
+        "page_end": 32
+      }
+    ],
+    "textstories": [
+      {
+        "id": 315,
+        "title": "Barge Captain's Son",
+        "page_start": 21,
+        "page_end": 22
+      }
+    ],
+    "advertisements": [
+      {
+        "id": 743,
+        "title": "",
+        "page_start": 1,
+        "page_end": 1
+      },
+      {
+        "id": 744,
+        "title": "",
+        "page_start": 20,
+        "page_end": 20
+      },
+      {
+        "id": 745,
+        "title": "",
+        "page_start": 33,
+        "page_end": 35
+      }
+    ],
+    "covers": [
+      {
+        "id": 307,
+        "title": "America's Best Comics",
+        "page_start": 0,
+        "page_end": 0
+      }
+    ]
+  },
+  {
+    "id": 5942,
+    "dlid": "6456",
+    "hash_code": "6da9003b",
+    "title": "Animal Comics 008",
+    "subdb": "comics",
+    "split": "new",
+    "stories": [
+      {
+        "id": 42867,
+        "story_id": "6456_1",
+        "title": "Albert Gnaws a Thing or Two, Too!",
+        "page_start": 1,
+        "page_end": 1
+      },
+      {
+        "id": 42868,
+        "story_id": "6456_2",
+        "title": "Uncle Wiggily",
+        "page_start": 2,
+        "page_end": 13
+      },
+      {
+        "id": 42869,
+        "story_id": "6456_3",
+        "title": "Hector the Henpecked Rooster",
+        "page_start": 14,
+        "page_end": 21
+      },
+      {
+        "id": 42872,
+        "story_id": "6456_6",
+        "title": "Blackie",
+        "page_start": 35,
+        "page_end": 45
+      },
+      {
+        "id": 42873,
+        "story_id": "6456_7",
+        "title": "Albert's Birthday",
+        "page_start": 46,
+        "page_end": 50
+      },
+      {
+        "id": 42874,
+        "story_id": "6456_8",
+        "title": "Fishing Bears",
+        "page_start": 51,
+        "page_end": 51
+      },
+      {
+        "id": 144294,
+        "story_id": "",
+        "title": "Palomino",
+        "page_start": 22,
+        "page_end": 31
+      },
+      {
+        "id": 144295,
+        "story_id": "",
+        "title": "The Orphan Canary",
+        "page_start": 32,
+        "page_end": 34
+      }
+    ],
+    "textstories": [],
+    "advertisements": [],
+    "covers": [
+      {
+        "id": 328,
+        "title": "Animal Adventures",
+        "page_start": 0,
+        "page_end": 0
+      }
+    ]
+  },
+  {
+    "id": 8443,
+    "dlid": "6021",
+    "hash_code": "cdcb2f5c",
+    "title": "Spy Smasher 007 (paper)",
+    "subdb": "comics",
+    "split": "test",
+    "stories": [
+      {
+        "id": 67436,
+        "story_id": "6021_2",
+        "title": "Spy Smasher: And The Jap Devil Dragon",
+        "page_start": 3,
+        "page_end": 13
+      },
+      {
+        "id": 67437,
+        "story_id": "6021_3",
+        "title": "Spy Smasher: And The Terror In Exile!",
+        "page_start": 15,
+        "page_end": 27
+      },
+      {
+        "id": 67438,
+        "story_id": "6021_4",
+        "title": "Sir Butch: Laugh-Crammed Fantasy Feature",
+        "page_start": 29,
+        "page_end": 34
+      },
+      {
+        "id": 67440,
+        "story_id": "6021_6",
+        "title": "Spy Smasher: And The Adventure Of the Golden Wasp",
+        "page_start": 37,
+        "page_end": 49
+      },
+      {
+        "id": 67441,
+        "story_id": "6021_7",
+        "title": "Spy Smasher: The Komitaji",
+        "page_start": 51,
+        "page_end": 65
+      }
+    ],
+    "textstories": [
+      {
+        "id": 29,
+        "title": "Death Visits the Dentist",
+        "page_start": 35,
+        "page_end": 36
+      }
+    ],
+    "advertisements": [
+      {
+        "id": 65,
+        "title": "Giant \"Paste The Axis\" Contest",
+        "page_start": 1,
+        "page_end": 1
+      },
+      {
+        "id": 66,
+        "title": "Whiz Comics",
+        "page_start": 14,
+        "page_end": 14
+      },
+      {
+        "id": 67,
+        "title": "Captain Midnight",
+        "page_start": 28,
+        "page_end": 28
+      },
+      {
+        "id": 68,
+        "title": "Captain Marvel Jr.",
+        "page_start": 50,
+        "page_end": 50
+      },
+      {
+        "id": 69,
+        "title": "Comix Cards",
+        "page_start": 66,
+        "page_end": 67
+      }
+    ],
+    "covers": [
+      {
+        "id": 25,
+        "title": "Front",
+        "page_start": 0,
+        "page_end": 0
+      }
+    ]
+  },
+  {
+    "id": 17713,
+    "dlid": "6029",
+    "hash_code": "eda80a3d",
+    "title": "Authentic Police Cases 017",
+    "subdb": "comics",
+    "split": "new",
+    "stories": [
+      {
+        "id": 132281,
+        "story_id": "6029_2",
+        "title": "Five-Alarm Torch!",
+        "page_start": 3,
+        "page_end": 8
+      },
+      {
+        "id": 132282,
+        "story_id": "6029_3",
+        "title": "9,000 Miles to the Noose!",
+        "page_start": 9,
+        "page_end": 14
+      },
+      {
+        "id": 132283,
+        "story_id": "6029_4",
+        "title": "Daily Doubles Death Trap",
+        "page_start": 15,
+        "page_end": 22
+      },
+      {
+        "id": 132284,
+        "story_id": "6029_5",
+        "title": "The Angel Mob",
+        "page_start": 23,
+        "page_end": 26
+      },
+      {
+        "id": 132285,
+        "story_id": "6029_6",
+        "title": "Blackmail Photography",
+        "page_start": 27,
+        "page_end": 34
+      }
+    ],
+    "textstories": [
+      {
+        "id": 392,
+        "title": "The Trigger-Squeeze Trap",
+        "page_start": 2,
+        "page_end": 2
+      },
+      {
+        "id": 393,
+        "title": "Blackmail Photography",
+        "page_start": 35,
+        "page_end": 35
+      }
+    ],
+    "advertisements": [
+      {
+        "id": 908,
+        "title": "",
+        "page_start": 36,
+        "page_end": 36
+      }
+    ],
+    "covers": [
+      {
+        "id": 360,
+        "title": "Police Cases",
+        "page_start": 0,
+        "page_end": 1
+      }
+    ]
+  },
+  {
+    "id": 16559,
+    "dlid": "19575",
+    "hash_code": "5bce843d",
+    "title": "Modern Comics 074 (paper) -JVJ",
+    "subdb": "comics",
+    "split": "val",
+    "stories": [
+      {
+        "id": 124970,
+        "story_id": "19575_1",
+        "title": "Blackhawk: Blackhawk Battles Captain Squidd",
+        "page_start": 2,
+        "page_end": 14
+      },
+      {
+        "id": 124971,
+        "story_id": "19575_2",
+        "title": "Dogtag: Yogi Slogi",
+        "page_start": 15,
+        "page_end": 20
+      },
+      {
+        "id": 124972,
+        "story_id": "19575_3",
+        "title": "Torchy: The Lofty Mountains Gig",
+        "page_start": 21,
+        "page_end": 26
+      },
+      {
+        "id": 124973,
+        "story_id": "19575_4",
+        "title": "Will Bragg: Mr. Loafer's Flats",
+        "page_start": 27,
+        "page_end": 32
+      },
+      {
+        "id": 124974,
+        "story_id": "19575_5",
+        "title": "Poodle McDoodle",
+        "page_start": 33,
+        "page_end": 33
+      },
+      {
+        "id": 124975,
+        "story_id": "19575_6",
+        "title": "Ezra For President: No Chance For Advancement!",
+        "page_start": 34,
+        "page_end": 40
+      },
+      {
+        "id": 124977,
+        "story_id": "19575_8",
+        "title": "Choo Choo: The Football Movie That Fumbled",
+        "page_start": 43,
+        "page_end": 48
+      },
+      {
+        "id": 143031,
+        "story_id": "",
+        "title": "\"U.S.\" Royal: Foiling Lunatic'S Revenge",
+        "page_start": 51,
+        "page_end": 51
+      }
+    ],
+    "textstories": [
+      {
+        "id": 20,
+        "title": "Conquerer",
+        "page_start": 41,
+        "page_end": 42
+      }
+    ],
+    "advertisements": [
+      {
+        "id": 30,
+        "title": "New Electric Baseball",
+        "page_start": 1,
+        "page_end": 1
+      },
+      {
+        "id": 31,
+        "title": "Bendix Bike",
+        "page_start": 49,
+        "page_end": 49
+      },
+      {
+        "id": 32,
+        "title": "How A SImple Discovery Made Billy A Very Happy Boy",
+        "page_start": 50,
+        "page_end": 50
+      }
+    ],
+    "covers": [
+      {
+        "id": 9,
+        "title": "Front",
+        "page_start": 0,
+        "page_end": 0
+      },
+      {
+        "id": 10,
+        "title": "Front October 9 2012 New Edit",
+        "page_start": 52,
+        "page_end": 52
+      },
+      {
+        "id": 11,
+        "title": "Back",
+        "page_start": 53,
+        "page_end": 53
+      }
+    ]
+  },
+  {
+    "id": 13784,
+    "dlid": "15144",
+    "hash_code": "a684ecee",
+    "title": "4 Most Comics v1 02 -now c2c",
+    "subdb": "comics",
+    "split": "new",
+    "stories": [
+      {
+        "id": 143365,
+        "story_id": "",
+        "title": "Dick Cole: wonder boy",
+        "page_start": 2,
+        "page_end": 25
+      },
+      {
+        "id": 143366,
+        "story_id": "",
+        "title": "Edison Bell and his Junior Aid Raid Wardens",
+        "page_start": 26,
+        "page_end": 36
+      },
+      {
+        "id": 143367,
+        "story_id": "",
+        "title": "The target and the targeters",
+        "page_start": 40,
+        "page_end": 49
+      },
+      {
+        "id": 143368,
+        "story_id": "",
+        "title": "The cadet: the web of sabotage",
+        "page_start": 50,
+        "page_end": 65
+      }
+    ],
+    "textstories": [
+      {
+        "id": 138,
+        "title": "Ye editor page",
+        "page_start": 1,
+        "page_end": 1
+      },
+      {
+        "id": 139,
+        "title": "Trouble... come and get it!",
+        "page_start": 38,
+        "page_end": 39
+      }
+    ],
+    "advertisements": [
+      {
+        "id": 456,
+        "title": "Aid Raid Wardens: general equipment",
+        "page_start": 37,
+        "page_end": 37
+      },
+      {
+        "id": 457,
+        "title": "what a combination",
+        "page_start": 66,
+        "page_end": 66
+      },
+      {
+        "id": 458,
+        "title": "blackout button",
+        "page_start": 67,
+        "page_end": 67
+      }
+    ],
+    "covers": [
+      {
+        "id": 149,
+        "title": "",
+        "page_start": 0,
+        "page_end": 0
+      }
+    ]
+  },
+  {
+    "id": 17690,
+    "dlid": "10755",
+    "hash_code": "539fd53b",
+    "title": "Atom Age Combat (1952 series) 001",
+    "subdb": "comics",
+    "split": "new",
+    "stories": [
+      {
+        "id": 132146,
+        "story_id": "10755_2",
+        "title": "Commandos Blitz a Red Invasion",
+        "page_start": 2,
+        "page_end": 9
+      },
+      {
+        "id": 132147,
+        "story_id": "10755_3",
+        "title": "Underground Action",
+        "page_start": 10,
+        "page_end": 16
+      },
+      {
+        "id": 132148,
+        "story_id": "10755_4",
+        "title": "Zero Hour Ahead",
+        "page_start": 17,
+        "page_end": 23
+      },
+      {
+        "id": 132149,
+        "story_id": "10755_5",
+        "title": "Perfect Fit",
+        "page_start": 24,
+        "page_end": 28
+      },
+      {
+        "id": 132150,
+        "story_id": "10755_6",
+        "title": "Dangerous Flight",
+        "page_start": 29,
+        "page_end": 33
+      }
+    ],
+    "textstories": [
+      {
+        "id": 353,
+        "title": "Operation Wolverine",
+        "page_start": 1,
+        "page_end": 1
+      },
+      {
+        "id": 354,
+        "title": "Dangerous Flight",
+        "page_start": 34,
+        "page_end": 34
+      }
+    ],
+    "advertisements": [
+      {
+        "id": 836,
+        "title": "",
+        "page_start": 35,
+        "page_end": 35
+      }
+    ],
+    "covers": [
+      {
+        "id": 334,
+        "title": "Atom-Age Combat",
+        "page_start": 0,
+        "page_end": 0
+      }
+    ]
+  },
+  {
+    "id": 861,
+    "dlid": "25833",
+    "hash_code": "36366388",
+    "title": "All True Romance 032 (or 4)",
+    "subdb": "comics",
+    "split": "new",
+    "stories": [
+      {
+        "id": 143848,
+        "story_id": "",
+        "title": "Proudly I gave my heart away",
+        "page_start": 2,
+        "page_end": 2
+      },
+      {
+        "id": 143849,
+        "story_id": "",
+        "title": "continue",
+        "page_start": 4,
+        "page_end": 6
+      },
+      {
+        "id": 143850,
+        "story_id": "",
+        "title": "continue",
+        "page_start": 8,
+        "page_end": 10
+      },
+      {
+        "id": 143851,
+        "story_id": "",
+        "title": "Determined Darling",
+        "page_start": 11,
+        "page_end": 11
+      },
+      {
+        "id": 143852,
+        "story_id": "",
+        "title": "continue",
+        "page_start": 13,
+        "page_end": 15
+      },
+      {
+        "id": 143853,
+        "story_id": "",
+        "title": "continue",
+        "page_start": 17,
+        "page_end": 18
+      },
+      {
+        "id": 143854,
+        "story_id": "",
+        "title": "He'd Never Understand",
+        "page_start": 20,
+        "page_end": 22
+      },
+      {
+        "id": 143855,
+        "story_id": "",
+        "title": "continue",
+        "page_start": 24,
+        "page_end": 25
+      },
+      {
+        "id": 143856,
+        "story_id": "",
+        "title": "When we search for love",
+        "page_start": 26,
+        "page_end": 27
+      },
+      {
+        "id": 143857,
+        "story_id": "",
+        "title": "continue",
+        "page_start": 29,
+        "page_end": 31
+      },
+      {
+        "id": 143858,
+        "story_id": "",
+        "title": "continue",
+        "page_start": 33,
+        "page_end": 33
+      }
+    ],
+    "textstories": [
+      {
+        "id": 247,
+        "title": "Dear Roberta Bennett",
+        "page_start": 12,
+        "page_end": 12
+      },
+      {
+        "id": 248,
+        "title": "Dear Miss Bennett",
+        "page_start": 19,
+        "page_end": 19
+      }
+    ],
+    "advertisements": [
+      {
+        "id": 658,
+        "title": "",
+        "page_start": 1,
+        "page_end": 1
+      },
+      {
+        "id": 659,
+        "title": "",
+        "page_start": 3,
+        "page_end": 3
+      },
+      {
+        "id": 660,
+        "title": "",
+        "page_start": 7,
+        "page_end": 7
+      },
+      {
+        "id": 661,
+        "title": "",
+        "page_start": 16,
+        "page_end": 16
+      },
+      {
+        "id": 662,
+        "title": "",
+        "page_start": 23,
+        "page_end": 23
+      },
+      {
+        "id": 663,
+        "title": "",
+        "page_start": 28,
+        "page_end": 28
+      },
+      {
+        "id": 664,
+        "title": "",
+        "page_start": 32,
+        "page_end": 32
+      },
+      {
+        "id": 665,
+        "title": "",
+        "page_start": 34,
+        "page_end": 35
+      }
+    ],
+    "covers": [
+      {
+        "id": 243,
+        "title": "All True Romance",
+        "page_start": 0,
+        "page_end": 0
+      }
+    ]
+  },
+  {
+    "id": 15856,
+    "dlid": "13081",
+    "hash_code": "36a1694b",
+    "title": "Feature Comics 024 (paper)",
+    "subdb": "comics",
+    "split": "dev",
+    "stories": [
+      {
+        "id": 119491,
+        "story_id": "13081_1",
+        "title": "The Mahati Diamond",
+        "page_start": 2,
+        "page_end": 10
+      },
+      {
+        "id": 119492,
+        "story_id": "13081_3",
+        "title": "Lala Palooza",
+        "page_start": 12,
+        "page_end": 12
+      },
+      {
+        "id": 119493,
+        "story_id": "13081_4",
+        "title": "The Phony Jim Towne",
+        "page_start": 15,
+        "page_end": 18
+      },
+      {
+        "id": 119494,
+        "story_id": "13081_5",
+        "title": "Toddy",
+        "page_start": 19,
+        "page_end": 19
+      },
+      {
+        "id": 119496,
+        "story_id": "13081_7",
+        "title": "Jane Arden",
+        "page_start": 21,
+        "page_end": 24
+      },
+      {
+        "id": 119497,
+        "story_id": "13081_8",
+        "title": "Big Top",
+        "page_start": 25,
+        "page_end": 26
+      },
+      {
+        "id": 119499,
+        "story_id": "13081_10",
+        "title": "Nillot the Swindler",
+        "page_start": 28,
+        "page_end": 32
+      },
+      {
+        "id": 119500,
+        "story_id": "13081_11",
+        "title": "Rube Goldberg's Side Show",
+        "page_start": 33,
+        "page_end": 33
+      },
+      {
+        "id": 119501,
+        "story_id": "13081_12",
+        "title": "Joe Palooka'S Boxing Course",
+        "page_start": 34,
+        "page_end": 34
+      },
+      {
+        "id": 119502,
+        "story_id": "13081_13",
+        "title": "They're Still Talking",
+        "page_start": 38,
+        "page_end": 38
+      },
+      {
+        "id": 119503,
+        "story_id": "13081_14",
+        "title": "Land of Enchantment",
+        "page_start": 39,
+        "page_end": 42
+      },
+      {
+        "id": 119504,
+        "story_id": "13081_15",
+        "title": "Rube Goldberg's Side Show",
+        "page_start": 43,
+        "page_end": 43
+      },
+      {
+        "id": 119505,
+        "story_id": "13081_16",
+        "title": "Dixie Dugan",
+        "page_start": 44,
+        "page_end": 46
+      },
+      {
+        "id": 119506,
+        "story_id": "13081_17",
+        "title": "Slim and Tubby",
+        "page_start": 47,
+        "page_end": 48
+      },
+      {
+        "id": 119508,
+        "story_id": "13081_19",
+        "title": "Ned Brant",
+        "page_start": 50,
+        "page_end": 54
+      },
+      {
+        "id": 119509,
+        "story_id": "13081_20",
+        "title": "Trapped",
+        "page_start": 55,
+        "page_end": 55
+      },
+      {
+        "id": 119510,
+        "story_id": "13081_21",
+        "title": "The Return of Jules Reynard",
+        "page_start": 57,
+        "page_end": 60
+      },
+      {
+        "id": 119511,
+        "story_id": "13081_23",
+        "title": "Mickey Finn",
+        "page_start": 62,
+        "page_end": 62
+      },
+      {
+        "id": 143314,
+        "story_id": "",
+        "title": "Lala Palooza",
+        "page_start": 13,
+        "page_end": 13
+      },
+      {
+        "id": 143315,
+        "story_id": "",
+        "title": "Lala Palooza",
+        "page_start": 14,
+        "page_end": 14
+      },
+      {
+        "id": 143316,
+        "story_id": "",
+        "title": "Toddy",
+        "page_start": 20,
+        "page_end": 20
+      },
+      {
+        "id": 143318,
+        "story_id": "",
+        "title": "Joe Palooka'S Album",
+        "page_start": 35,
+        "page_end": 35
+      },
+      {
+        "id": 143319,
+        "story_id": "",
+        "title": "Joe Palooka'S Album",
+        "page_start": 36,
+        "page_end": 36
+      },
+      {
+        "id": 143320,
+        "story_id": "",
+        "title": "Joe Palooka'S Album",
+        "page_start": 37,
+        "page_end": 37
+      },
+      {
+        "id": 143338,
+        "story_id": "",
+        "title": "Fisherman'S Luck",
+        "page_start": 56,
+        "page_end": 56
+      },
+      {
+        "id": 143339,
+        "story_id": "",
+        "title": "Mickey Finn",
+        "page_start": 63,
+        "page_end": 63
+      },
+      {
+        "id": 143340,
+        "story_id": "",
+        "title": "Mickey Finn",
+        "page_start": 64,
+        "page_end": 64
+      },
+      {
+        "id": 143341,
+        "story_id": "",
+        "title": "Mickey Finn",
+        "page_start": 65,
+        "page_end": 65
+      }
+    ],
+    "textstories": [
+      {
+        "id": 69,
+        "title": "Devil's Head",
+        "page_start": 49,
+        "page_end": 50
+      }
+    ],
+    "advertisements": [
+      {
+        "id": 188,
+        "title": "Beautiful Desk / Remington Noiseless Portable Typewriter",
+        "page_start": 1,
+        "page_end": 1
+      },
+      {
+        "id": 189,
+        "title": "Morrow Coaster Brakes",
+        "page_start": 11,
+        "page_end": 11
+      },
+      {
+        "id": 190,
+        "title": "Club Photo Service Rolls Developed",
+        "page_start": 27,
+        "page_end": 27
+      },
+      {
+        "id": 191,
+        "title": "Morrow Coaster Brake",
+        "page_start": 66,
+        "page_end": 66
+      },
+      {
+        "id": 192,
+        "title": "Ride A Bike",
+        "page_start": 67,
+        "page_end": 67
+      }
+    ],
+    "covers": [
+      {
+        "id": 74,
+        "title": "Front",
+        "page_start": 0,
+        "page_end": 0
+      },
+      {
+        "id": 75,
+        "title": "???",
+        "page_start": 68,
+        "page_end": 68
+      }
+    ]
+  },
+  {
+    "id": 9870,
+    "dlid": "311",
+    "hash_code": "5dc126b5",
+    "title": "The Flame 003",
+    "subdb": "comics",
+    "split": "test",
+    "stories": [
+      {
+        "id": 77362,
+        "story_id": "311_1",
+        "title": "The Flame: Dr. Ivan's Insurance Bombing Racket",
+        "page_start": 2,
+        "page_end": 21
+      },
+      {
+        "id": 77363,
+        "story_id": "311_2",
+        "title": "The Flame: The Diamond of Death",
+        "page_start": 22,
+        "page_end": 30
+      },
+      {
+        "id": 77365,
+        "story_id": "311_4",
+        "title": "The Flame: The Mad Scientist of Hell's Kitchen",
+        "page_start": 34,
+        "page_end": 42
+      },
+      {
+        "id": 77366,
+        "story_id": "311_5",
+        "title": "Lone Hand: A \"Wild Tex\" Dawson Story",
+        "page_start": 43,
+        "page_end": 47
+      },
+      {
+        "id": 77367,
+        "story_id": "311_6",
+        "title": "Inspector Bancroft Of Scotland Yard: The Waterfront Dope Smugglers",
+        "page_start": 49,
+        "page_end": 52
+      },
+      {
+        "id": 77368,
+        "story_id": "311_7",
+        "title": "Dr. Fung Master Sleuth Of The Orient: The Charm Bracelet Murder",
+        "page_start": 53,
+        "page_end": 58
+      },
+      {
+        "id": 77369,
+        "story_id": "311_8",
+        "title": "K-51 Spies At War: Hong Kong Assignment",
+        "page_start": 59,
+        "page_end": 63
+      }
+    ],
+    "textstories": [
+      {
+        "id": 31,
+        "title": "The Raider Of The Spaceways",
+        "page_start": 31,
+        "page_end": 32
+      }
+    ],
+    "advertisements": [
+      {
+        "id": 71,
+        "title": "Various Comics Ads",
+        "page_start": 1,
+        "page_end": 1
+      },
+      {
+        "id": 72,
+        "title": "Kooba Free Coupon",
+        "page_start": 33,
+        "page_end": 33
+      },
+      {
+        "id": 73,
+        "title": "The Blue Beetle",
+        "page_start": 64,
+        "page_end": 64
+      },
+      {
+        "id": 74,
+        "title": "The Black Lion Wonderworld Comics",
+        "page_start": 65,
+        "page_end": 65
+      },
+      {
+        "id": 75,
+        "title": "Be A Trained RADIO Technician",
+        "page_start": 66,
+        "page_end": 66
+      }
+    ],
+    "covers": [
+      {
+        "id": 27,
+        "title": "Front",
+        "page_start": 0,
+        "page_end": 0
+      }
+    ]
+  },
+  {
+    "id": 9695,
+    "dlid": "7446",
+    "hash_code": "b73ce398",
+    "title": "All Top Comics 006",
+    "subdb": "comics",
+    "split": "new",
+    "stories": [
+      {
+        "id": 143793,
+        "story_id": "",
+        "title": "Cosmo Cat",
+        "page_start": 2,
+        "page_end": 7
+      },
+      {
+        "id": 143794,
+        "story_id": "",
+        "title": "Flashlyte",
+        "page_start": 8,
+        "page_end": 13
+      },
+      {
+        "id": 143795,
+        "story_id": "",
+        "title": "Tommy Tot's Air Tips",
+        "page_start": 16,
+        "page_end": 16
+      },
+      {
+        "id": 143796,
+        "story_id": "",
+        "title": "It's True",
+        "page_start": 17,
+        "page_end": 17
+      },
+      {
+        "id": 143797,
+        "story_id": "",
+        "title": "percy",
+        "page_start": 18,
+        "page_end": 23
+      },
+      {
+        "id": 143798,
+        "story_id": "",
+        "title": "Marty Monk",
+        "page_start": 24,
+        "page_end": 25
+      },
+      {
+        "id": 143799,
+        "story_id": "",
+        "title": "Red Kamphor",
+        "page_start": 26,
+        "page_end": 31
+      }
+    ],
+    "textstories": [
+      {
+        "id": 236,
+        "title": "Jerry Jingle's Magic",
+        "page_start": 14,
+        "page_end": 15
+      }
+    ],
+    "advertisements": [
+      {
+        "id": 642,
+        "title": "",
+        "page_start": 1,
+        "page_end": 1
+      },
+      {
+        "id": 643,
+        "title": "",
+        "page_start": 32,
+        "page_end": 35
+      }
+    ],
+    "covers": [
+      {
+        "id": 231,
+        "title": "All Top Comics",
+        "page_start": 0,
+        "page_end": 0
+      }
+    ]
+  },
+  {
+    "id": 11496,
+    "dlid": "14147",
+    "hash_code": "90f1f497",
+    "title": "Airboy Comics v06 02 (diff ver)-c2c",
+    "subdb": "comics",
+    "split": "new",
+    "stories": [
+      {
+        "id": 143626,
+        "story_id": "",
+        "title": "Airboy",
+        "page_start": 2,
+        "page_end": 16
+      },
+      {
+        "id": 143627,
+        "story_id": "",
+        "title": "The Boss of Dreamland",
+        "page_start": 17,
+        "page_end": 24
+      },
+      {
+        "id": 143628,
+        "story_id": "",
+        "title": "Stanly Ketchel and Violn",
+        "page_start": 25,
+        "page_end": 30
+      },
+      {
+        "id": 143629,
+        "story_id": "",
+        "title": "The Hying Fool",
+        "page_start": 33,
+        "page_end": 40
+      },
+      {
+        "id": 143630,
+        "story_id": "",
+        "title": "",
+        "page_start": 41,
+        "page_end": 47
+      }
+    ],
+    "textstories": [
+      {
+        "id": 210,
+        "title": "Risk",
+        "page_start": 31,
+        "page_end": 32
+      }
+    ],
+    "advertisements": [
+      {
+        "id": 587,
+        "title": "",
+        "page_start": 1,
+        "page_end": 1
+      },
+      {
+        "id": 588,
+        "title": "",
+        "page_start": 48,
+        "page_end": 51
+      }
+    ],
+    "covers": [
+      {
+        "id": 206,
+        "title": "AirBoy",
+        "page_start": 0,
+        "page_end": 0
+      }
+    ]
+  },
+  {
+    "id": 16631,
+    "dlid": "20062",
+    "hash_code": "b4affa4f",
+    "title": "National Comics 039 (paper)",
+    "subdb": "comics",
+    "split": "dev",
+    "stories": [
+      {
+        "id": 125672,
+        "story_id": "20062_1",
+        "title": "Uncle Sam",
+        "page_start": 2,
+        "page_end": 12
+      },
+      {
+        "id": 125673,
+        "story_id": "20062_2",
+        "title": "The Hand of Justice",
+        "page_start": 13,
+        "page_end": 20
+      },
+      {
+        "id": 125674,
+        "story_id": "20062_3",
+        "title": "Champion Liar",
+        "page_start": 21,
+        "page_end": 21
+      },
+      {
+        "id": 125675,
+        "story_id": "20062_4",
+        "title": "The Voice of Destruction!",
+        "page_start": 22,
+        "page_end": 28
+      },
+      {
+        "id": 125676,
+        "story_id": "20062_5",
+        "title": "Salty Waters",
+        "page_start": 29,
+        "page_end": 29
+      },
+      {
+        "id": 125677,
+        "story_id": "20062_6",
+        "title": "Destroyer 171",
+        "page_start": 30,
+        "page_end": 36
+      },
+      {
+        "id": 125678,
+        "story_id": "20062_7",
+        "title": "The Unknown",
+        "page_start": 37,
+        "page_end": 42
+      },
+      {
+        "id": 125680,
+        "story_id": "20062_10",
+        "title": "Chic Carter",
+        "page_start": 45,
+        "page_end": 50
+      },
+      {
+        "id": 125681,
+        "story_id": "20062_11",
+        "title": "The Monster of the Masquerade!",
+        "page_start": 51,
+        "page_end": 57
+      }
+    ],
+    "textstories": [
+      {
+        "id": 96,
+        "title": "Valley of Fear",
+        "page_start": 43,
+        "page_end": 44
+      }
+    ],
+    "advertisements": [
+      {
+        "id": 286,
+        "title": "5-Power Telescope / Airplane Spotter'S Guide",
+        "page_start": 1,
+        "page_end": 1
+      },
+      {
+        "id": 287,
+        "title": "5 Power Telescope / New Commando Machine Gun",
+        "page_start": 58,
+        "page_end": 58
+      },
+      {
+        "id": 288,
+        "title": "Encyclopedia",
+        "page_start": 59,
+        "page_end": 59
+      }
+    ],
+    "covers": [
+      {
+        "id": 103,
+        "title": "Front",
+        "page_start": 0,
+        "page_end": 0
+      }
+    ]
+  },
+  {
+    "id": 876,
+    "dlid": "21324",
+    "hash_code": "d9fc5b73",
+    "title": "Billy Bunny 004",
+    "subdb": "comics",
+    "split": "new",
+    "stories": [
+      {
+        "id": 4586,
+        "story_id": "21324_2",
+        "title": "Billy Bunny",
+        "page_start": 4,
+        "page_end": 9
+      },
+      {
+        "id": 4587,
+        "story_id": "21324_3",
+        "title": "Zingo the Zooper Zebra",
+        "page_start": 10,
+        "page_end": 15
+      },
+      {
+        "id": 4588,
+        "story_id": "21324_6",
+        "title": "Lil Chief Hot-Shot",
+        "page_start": 20,
+        "page_end": 24
+      },
+      {
+        "id": 144456,
+        "story_id": "",
+        "title": "Edie Elephant",
+        "page_start": 27,
+        "page_end": 31
+      }
+    ],
+    "textstories": [
+      {
+        "id": 509,
+        "title": "Billy Bunny Boo-Boos",
+        "page_start": 25,
+        "page_end": 26
+      }
+    ],
+    "advertisements": [
+      {
+        "id": 1212,
+        "title": "",
+        "page_start": 1,
+        "page_end": 3
+      },
+      {
+        "id": 1213,
+        "title": "",
+        "page_start": 16,
+        "page_end": 19
+      },
+      {
+        "id": 1214,
+        "title": "",
+        "page_start": 32,
+        "page_end": 35
+      }
+    ],
+    "covers": [
+      {
+        "id": 467,
+        "title": "Billy Bunny",
+        "page_start": 0,
+        "page_end": 0
+      }
+    ]
+  },
+  {
+    "id": 152,
+    "dlid": "14912",
+    "hash_code": "01386bd6",
+    "title": "Beyond 002 -fixed",
+    "subdb": "comics",
+    "split": "new",
+    "stories": [
+      {
+        "id": 311,
+        "story_id": "14912_2",
+        "title": "The Ghost Who Stole a Body",
+        "page_start": 10,
+        "page_end": 16
+      },
+      {
+        "id": 312,
+        "story_id": "14912_3",
+        "title": "Valley of the Scaly Monsters",
+        "page_start": 17,
+        "page_end": 23
+      },
+      {
+        "id": 314,
+        "story_id": "14912_5",
+        "title": "The Shrieking Terror",
+        "page_start": 26,
+        "page_end": 33
+      },
+      {
+        "id": 144429,
+        "story_id": "",
+        "title": "The mistery of Lunablanca",
+        "page_start": 2,
+        "page_end": 9
+      }
+    ],
+    "textstories": [
+      {
+        "id": 469,
+        "title": "Bubble of Destruction",
+        "page_start": 24,
+        "page_end": 25
+      }
+    ],
+    "advertisements": [
+      {
+        "id": 1126,
+        "title": "",
+        "page_start": 1,
+        "page_end": 1
+      },
+      {
+        "id": 1127,
+        "title": "",
+        "page_start": 34,
+        "page_end": 35
+      }
+    ],
+    "covers": [
+      {
+        "id": 430,
+        "title": "The Beyond",
+        "page_start": 0,
+        "page_end": 0
+      }
+    ]
+  },
+  {
+    "id": 5734,
+    "dlid": "16803",
+    "hash_code": "cf004fdc",
+    "title": "Big Shot Comics 032 -now c2c",
+    "subdb": "comics",
+    "split": "new",
+    "stories": [
+      {
+        "id": 41399,
+        "story_id": "16803_1",
+        "title": "",
+        "page_start": 2,
+        "page_end": 8
+      },
+      {
+        "id": 41400,
+        "story_id": "16803_2",
+        "title": "",
+        "page_start": 9,
+        "page_end": 15
+      },
+      {
+        "id": 41401,
+        "story_id": "16803_3",
+        "title": "",
+        "page_start": 16,
+        "page_end": 16
+      },
+      {
+        "id": 41402,
+        "story_id": "16803_4",
+        "title": "An evil genius, spawned in Berlin looses a horrid plague...",
+        "page_start": 17,
+        "page_end": 24
+      },
+      {
+        "id": 41403,
+        "story_id": "16803_5",
+        "title": "",
+        "page_start": 25,
+        "page_end": 30
+      },
+      {
+        "id": 41405,
+        "story_id": "16803_7",
+        "title": "",
+        "page_start": 33,
+        "page_end": 40
+      },
+      {
+        "id": 41406,
+        "story_id": "16803_8",
+        "title": "",
+        "page_start": 42,
+        "page_end": 46
+      },
+      {
+        "id": 41407,
+        "story_id": "16803_9",
+        "title": "",
+        "page_start": 47,
+        "page_end": 52
+      },
+      {
+        "id": 41408,
+        "story_id": "16803_10",
+        "title": "",
+        "page_start": 53,
+        "page_end": 60
+      },
+      {
+        "id": 41409,
+        "story_id": "16803_11",
+        "title": "",
+        "page_start": 61,
+        "page_end": 65
+      },
+      {
+        "id": 144441,
+        "story_id": "",
+        "title": "",
+        "page_start": 41,
+        "page_end": 41
+      }
+    ],
+    "textstories": [
+      {
+        "id": 492,
+        "title": "Dutch Treat",
+        "page_start": 31,
+        "page_end": 32
+      }
+    ],
+    "advertisements": [
+      {
+        "id": 1177,
+        "title": "",
+        "page_start": 1,
+        "page_end": 1
+      },
+      {
+        "id": 1178,
+        "title": "",
+        "page_start": 66,
+        "page_end": 67
+      }
+    ],
+    "covers": [
+      {
+        "id": 452,
+        "title": "Big Shot Comics",
+        "page_start": 0,
+        "page_end": 0
+      }
+    ]
+  },
+  {
+    "id": 3925,
+    "dlid": "4515",
+    "hash_code": "2d2c8394",
+    "title": "Atomic Rabbit 007",
+    "subdb": "comics",
+    "split": "new",
+    "stories": [
+      {
+        "id": 28215,
+        "story_id": "4515_1",
+        "title": "Do They, Mom?",
+        "page_start": 1,
+        "page_end": 1
+      },
+      {
+        "id": 28216,
+        "story_id": "4515_2",
+        "title": "The Earthquake and the Egg",
+        "page_start": 2,
+        "page_end": 8
+      },
+      {
+        "id": 28217,
+        "story_id": "4515_3",
+        "title": "The Robot",
+        "page_start": 9,
+        "page_end": 13
+      },
+      {
+        "id": 28218,
+        "story_id": "4515_4",
+        "title": "Get the Point",
+        "page_start": 14,
+        "page_end": 14
+      },
+      {
+        "id": 28220,
+        "story_id": "4515_7",
+        "title": "Polly, the Ghost Parrot",
+        "page_start": 17,
+        "page_end": 17
+      },
+      {
+        "id": 28221,
+        "story_id": "4515_8",
+        "title": "Li'l Rabbit Gets Even",
+        "page_start": 18,
+        "page_end": 22
+      },
+      {
+        "id": 28222,
+        "story_id": "4515_9",
+        "title": "Knock! Knock!",
+        "page_start": 23,
+        "page_end": 23
+      },
+      {
+        "id": 28223,
+        "story_id": "4515_10",
+        "title": "Who's the Fool?",
+        "page_start": 24,
+        "page_end": 28
+      },
+      {
+        "id": 28224,
+        "story_id": "4515_11",
+        "title": "Whoops... Wrong Bottle",
+        "page_start": 29,
+        "page_end": 31
+      },
+      {
+        "id": 28225,
+        "story_id": "4515_12",
+        "title": "Li'l Mouse",
+        "page_start": 32,
+        "page_end": 32
+      },
+      {
+        "id": 28226,
+        "story_id": "4515_15",
+        "title": "You're Breaking Your Father's Heart",
+        "page_start": 34,
+        "page_end": 34
+      },
+      {
+        "id": 28227,
+        "story_id": "4515_16",
+        "title": "Plain Silly",
+        "page_start": 35,
+        "page_end": 35
+      }
+    ],
+    "textstories": [
+      {
+        "id": 371,
+        "title": "A Fool for Gold",
+        "page_start": 15,
+        "page_end": 16
+      }
+    ],
+    "advertisements": [
+      {
+        "id": 869,
+        "title": "",
+        "page_start": 33,
+        "page_end": 33
+      }
+    ],
+    "covers": [
+      {
+        "id": 348,
+        "title": "Atomic Rabbit",
+        "page_start": 0,
+        "page_end": 0
+      }
+    ]
+  },
+  {
+    "id": 5708,
+    "dlid": "21873",
+    "hash_code": "c058f544",
+    "title": "Big Shot Comics 008 (paper)-c2c",
+    "subdb": "comics",
+    "split": "new",
+    "stories": [
+      {
+        "id": 41087,
+        "story_id": "21873_2",
+        "title": "Norgo's Freeze Weapon",
+        "page_start": 2,
+        "page_end": 12
+      },
+      {
+        "id": 41088,
+        "story_id": "21873_3",
+        "title": "Reunion with Knobby",
+        "page_start": 13,
+        "page_end": 18
+      },
+      {
+        "id": 41090,
+        "story_id": "21873_6",
+        "title": "The Robot Killer",
+        "page_start": 21,
+        "page_end": 26
+      },
+      {
+        "id": 41091,
+        "story_id": "21873_7",
+        "title": "The Hypnotist",
+        "page_start": 27,
+        "page_end": 32
+      },
+      {
+        "id": 41092,
+        "story_id": "21873_8",
+        "title": "Jibby Jones",
+        "page_start": 33,
+        "page_end": 34
+      },
+      {
+        "id": 41094,
+        "story_id": "21873_10",
+        "title": "The Kidnapping of David Frome, Part 3",
+        "page_start": 36,
+        "page_end": 40
+      },
+      {
+        "id": 41095,
+        "story_id": "21873_11",
+        "title": "Mike the Mascot",
+        "page_start": 41,
+        "page_end": 42
+      },
+      {
+        "id": 41096,
+        "story_id": "21873_12",
+        "title": "Mystery in Metalanim",
+        "page_start": 43,
+        "page_end": 48
+      },
+      {
+        "id": 41097,
+        "story_id": "21873_13",
+        "title": "Kid Stuff",
+        "page_start": 49,
+        "page_end": 49
+      },
+      {
+        "id": 41098,
+        "story_id": "21873_14",
+        "title": "Dixie Dugan",
+        "page_start": 50,
+        "page_end": 52
+      },
+      {
+        "id": 41099,
+        "story_id": "21873_15",
+        "title": "The Chilean Drug Smugglers",
+        "page_start": 53,
+        "page_end": 58
+      },
+      {
+        "id": 41100,
+        "story_id": "21873_16",
+        "title": "Too Much Santa Claus",
+        "page_start": 59,
+        "page_end": 59
+      },
+      {
+        "id": 41101,
+        "story_id": "21873_17",
+        "title": "Mystery of the Missing Shoes",
+        "page_start": 60,
+        "page_end": 65
+      },
+      {
+        "id": 144437,
+        "story_id": "",
+        "title": "Movieland Sketches",
+        "page_start": 35,
+        "page_end": 35
+      }
+    ],
+    "textstories": [
+      {
+        "id": 485,
+        "title": "Joe Palooka's Christmas Carol",
+        "page_start": 19,
+        "page_end": 20
+      }
+    ],
+    "advertisements": [
+      {
+        "id": 1163,
+        "title": "",
+        "page_start": 1,
+        "page_end": 1
+      },
+      {
+        "id": 1165,
+        "title": "",
+        "page_start": 66,
+        "page_end": 67
+      }
+    ],
+    "covers": [
+      {
+        "id": 445,
+        "title": "Big Shot Comics",
+        "page_start": 0,
+        "page_end": 0
+      }
+    ]
+  },
+  {
+    "id": 2562,
+    "dlid": "12881",
+    "hash_code": "75887499",
+    "title": "Barnyard Comics 019 (Frazetta art)-c2c",
+    "subdb": "comics",
+    "split": "new",
+    "stories": [
+      {
+        "id": 15856,
+        "story_id": "12881_1",
+        "title": "Barney Rooster",
+        "page_start": 2,
+        "page_end": 8
+      },
+      {
+        "id": 15857,
+        "story_id": "12881_2",
+        "title": "Hucky Duck",
+        "page_start": 9,
+        "page_end": 10
+      },
+      {
+        "id": 15858,
+        "story_id": "12881_3",
+        "title": "Scatty",
+        "page_start": 11,
+        "page_end": 17
+      },
+      {
+        "id": 15859,
+        "story_id": "12881_4",
+        "title": "Stanley",
+        "page_start": 18,
+        "page_end": 20
+      },
+      {
+        "id": 15862,
+        "story_id": "12881_7",
+        "title": "The Cats with the Beautiful Tails",
+        "page_start": 28,
+        "page_end": 28
+      },
+      {
+        "id": 15863,
+        "story_id": "12881_8",
+        "title": "Barney Rooster",
+        "page_start": 29,
+        "page_end": 30
+      },
+      {
+        "id": 15864,
+        "story_id": "12881_9",
+        "title": "Chappy Chipmunk",
+        "page_start": 31,
+        "page_end": 36
+      },
+      {
+        "id": 15865,
+        "story_id": "12881_10",
+        "title": "Samuel Spaniel",
+        "page_start": 37,
+        "page_end": 38
+      },
+      {
+        "id": 15868,
+        "story_id": "12881_13",
+        "title": "Ol' Rep",
+        "page_start": 46,
+        "page_end": 46
+      },
+      {
+        "id": 15869,
+        "story_id": "12881_14",
+        "title": "Dudley",
+        "page_start": 47,
+        "page_end": 48
+      },
+      {
+        "id": 144404,
+        "story_id": "",
+        "title": "Robin Hood Robin",
+        "page_start": 22,
+        "page_end": 27
+      },
+      {
+        "id": 144405,
+        "story_id": "",
+        "title": "Kippie",
+        "page_start": 40,
+        "page_end": 45
+      }
+    ],
+    "textstories": [
+      {
+        "id": 437,
+        "title": "Slippy the Seal",
+        "page_start": 21,
+        "page_end": 21
+      },
+      {
+        "id": 439,
+        "title": "The Cleverest One",
+        "page_start": 39,
+        "page_end": 39
+      }
+    ],
+    "advertisements": [
+      {
+        "id": 1000,
+        "title": "",
+        "page_start": 1,
+        "page_end": 1
+      },
+      {
+        "id": 1001,
+        "title": "",
+        "page_start": 49,
+        "page_end": 51
+      }
+    ],
+    "covers": [
+      {
+        "id": 399,
+        "title": "Barnyard Comics",
+        "page_start": 0,
+        "page_end": 0
+      }
+    ]
+  },
+  {
+    "id": 15042,
+    "dlid": "19414",
+    "hash_code": "326a8c05",
+    "title": "Prize Comics 063 (diff ver) -JVJ",
+    "subdb": "comics",
+    "split": "test",
+    "stories": [
+      {
+        "id": 113953,
+        "story_id": "19414_1",
+        "title": "Boom Boom Brannigan: Blind Man's Bluff",
+        "page_start": 2,
+        "page_end": 11
+      },
+      {
+        "id": 113954,
+        "story_id": "19414_2",
+        "title": "Frankenstein: The Ride of the Valkyries",
+        "page_start": 12,
+        "page_end": 19
+      },
+      {
+        "id": 113955,
+        "story_id": "19414_3",
+        "title": "Teen-Age Tommy: Frankie Singhotcha",
+        "page_start": 20,
+        "page_end": 25
+      },
+      {
+        "id": 113956,
+        "story_id": "19414_4",
+        "title": "Yank And Doodle And The Black Owl: Stop the Presses",
+        "page_start": 26,
+        "page_end": 31
+      },
+      {
+        "id": 113958,
+        "story_id": "19414_6",
+        "title": "Jason: Water, Water Everywhere",
+        "page_start": 34,
+        "page_end": 41
+      },
+      {
+        "id": 113959,
+        "story_id": "19414_7",
+        "title": "Roumania's Strangest Killer",
+        "page_start": 42,
+        "page_end": 47
+      }
+    ],
+    "textstories": [
+      {
+        "id": 25,
+        "title": "Juke-Box Serenade",
+        "page_start": 32,
+        "page_end": 33
+      }
+    ],
+    "advertisements": [
+      {
+        "id": 50,
+        "title": "Double Viderm Skin Treatment",
+        "page_start": 1,
+        "page_end": 1
+      },
+      {
+        "id": 51,
+        "title": "Pocket Adding Machine / A TDY Sewing Machine / Special Sportsmen'S Knife Offer!",
+        "page_start": 48,
+        "page_end": 48
+      },
+      {
+        "id": 52,
+        "title": "Free Atom Bomb Shoulder Patch",
+        "page_start": 49,
+        "page_end": 49
+      },
+      {
+        "id": 53,
+        "title": "Commander: The Amazing New Abdominal Supporter",
+        "page_start": 50,
+        "page_end": 50
+      },
+      {
+        "id": 54,
+        "title": "Technicolor Comicscope",
+        "page_start": 51,
+        "page_end": 51
+      }
+    ],
+    "covers": [
+      {
+        "id": 20,
+        "title": "Front",
+        "page_start": 0,
+        "page_end": 0
+      },
+      {
+        "id": 21,
+        "title": "Back",
+        "page_start": 52,
+        "page_end": 52
+      }
+    ]
+  },
+  {
+    "id": 723,
+    "dlid": "11874",
+    "hash_code": "f269cb77",
+    "title": "Super-Mystery Comics v06 002 (50 of 52 pgs)",
+    "subdb": "comics",
+    "split": "test",
+    "stories": [
+      {
+        "id": 3692,
+        "story_id": "11874_1",
+        "title": "Uno",
+        "page_start": 1,
+        "page_end": 12
+      },
+      {
+        "id": 3693,
+        "story_id": "11874_2",
+        "title": "The Adventures Of Bert And Sue: A Portrait of a Murderer",
+        "page_start": 13,
+        "page_end": 22
+      },
+      {
+        "id": 3694,
+        "story_id": "11874_3",
+        "title": "Harry the Hack",
+        "page_start": 23,
+        "page_end": 27
+      },
+      {
+        "id": 3696,
+        "story_id": "11874_5",
+        "title": "Mr. Risk",
+        "page_start": 30,
+        "page_end": 36
+      },
+      {
+        "id": 3697,
+        "story_id": "11874_6",
+        "title": "Magno and Davey: Montezuma'S Treasure",
+        "page_start": 37,
+        "page_end": 45
+      },
+      {
+        "id": 3698,
+        "story_id": "11874_7",
+        "title": "Harry the Hack",
+        "page_start": 46,
+        "page_end": 48
+      }
+    ],
+    "textstories": [
+      {
+        "id": 30,
+        "title": "Wild West Gun-Savvy",
+        "page_start": 28,
+        "page_end": 29
+      }
+    ],
+    "advertisements": [
+      {
+        "id": 70,
+        "title": "\"Everlasting Health And Strength\"",
+        "page_start": 49,
+        "page_end": 49
+      }
+    ],
+    "covers": [
+      {
+        "id": 26,
+        "title": "Front",
+        "page_start": 0,
+        "page_end": 0
+      }
+    ]
+  }
+]

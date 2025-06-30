@@ -24,11 +24,11 @@ CoSMo/models/best_model.pt
 Statistics/data
 Statistics/models
 
-visualizations/
+visualizations
 
 utils/clean_new_books.json
 multimodal-comic-pss/utils/corrupted.txt
 
 singlepage_exp/detection/magi_out
 
-data/
+data/DCM/magi
